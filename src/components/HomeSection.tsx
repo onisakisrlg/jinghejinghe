@@ -1,0 +1,234 @@
+import React from 'react';
+import { COMPLIANCE_INFO } from '../data';
+import { Clock, MapPin, Shield, HelpCircle, FileText, Scale } from 'lucide-react';
+
+export default function HomeSection({ setActiveSection }: { setActiveSection: (section: string) => void }) {
+  const [showPrivacy, setShowPrivacy] = React.useState(false);
+  const [showTokusho, setShowTokusho] = React.useState(false);
+
+  return (
+    <div id="home-section" className="space-y-12 animate-fade-in">
+      {/* Hero Welcome banner */}
+      <section className="relative overflow-hidden rounded-3xl bg-radial from-emerald-850 to-teal-950 text-white py-16 px-6 sm:px-12 text-center shadow-xl">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+        <div className="max-w-3xl mx-auto relative z-10 space-y-6">
+          <div className="inline-flex items-center space-x-2 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+            <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>大阪市中央区島之内の地域密着型薬局</span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            健康と笑顔を結ぶ、<br /><span className="text-emerald-400">京和薬局</span>は街の保健室です。
+          </h1>
+          <p className="text-emerald-100/90 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-light">
+            京和薬局株式会社は、一般用医薬品（第2類・指定第2類・第3類）の確実なご案内を通じて、地域の皆様のセルフメディケーションをサポートします。
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+            <button
+              onClick={() => setActiveSection('products')}
+              id="hero-products-btn"
+              className="bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg shadow-emerald-950/20 transition-all duration-200 cursor-pointer text-sm"
+            >
+              取扱い医薬品を見る
+            </button>
+            <button
+              onClick={() => setActiveSection('contact')}
+              id="hero-pharmacist-btn"
+              className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-xl border border-white/20 hover:border-white/40 transition duration-200 cursor-pointer text-sm flex items-center justify-center gap-2"
+            >
+              <span>AIお薬相談窓口に相談</span>
+              <span className="bg-amber-400 text-slate-900 text-[10px] uppercase font-bold px-1.5 py-0.5 rounded-full">査 AI</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Basic Shop Information */}
+      <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Address and Contact info */}
+        <div className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm hover:shadow-md transition duration-200 flex flex-col justify-between" id="info-address-card">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-3 text-emerald-800">
+              <div className="bg-emerald-50 p-2.5 rounded-lg">
+                <MapPin className="h-5 w-5 text-emerald-600" />
+              </div>
+              <h3 className="font-bold text-lg text-slate-900">所在地・店舗位置</h3>
+            </div>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              〒542-0082<br />
+              <strong className="text-slate-950">{COMPLIANCE_INFO.address}</strong>
+            </p>
+            <p className="text-xs text-slate-500">
+              ※長堀橋駅出口から徒歩すぐ、交通アクセスの良い長堀小谷マンションの1階です。気軽にお立ち寄りください。
+            </p>
+          </div>
+          <div className="mt-6 pt-4 border-t border-slate-100 space-y-2">
+            <div className="flex justify-between items-center">
+              <div>
+                <div className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">店舗直通電話</div>
+                <div className="text-lg font-black text-emerald-805" id="store-phone-display">{COMPLIANCE_INFO.tel}</div>
+              </div>
+              <div className="text-right">
+                <div className="text-[11px] text-slate-505 font-bold uppercase tracking-wider">FAX番号</div>
+                <div className="text-sm font-bold text-slate-700" id="store-fax-display">{COMPLIANCE_INFO.fax}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Business Hours */}
+        <div className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm hover:shadow-md transition duration-200 flex flex-col justify-between" id="info-hours-card">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-3 text-emerald-800">
+              <div className="bg-emerald-50 p-2.5 rounded-lg">
+                <Clock className="h-5 w-5 text-emerald-600" />
+              </div>
+              <h3 className="font-bold text-lg text-slate-900">営業時間のご案内</h3>
+            </div>
+            <div className="space-y-2">
+              {COMPLIANCE_INFO.businessHours.map((item, idx) => (
+                <div key={idx} className="flex justify-between items-center text-sm py-2 border-b border-dashed border-slate-100 last:border-none">
+                  <span className="text-slate-600 font-medium">{item.day}</span>
+                  <span className={`font-semibold ${item.hours.includes('休業') ? 'text-red-500' : 'text-slate-900'}`}>{item.hours}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <p className="text-[11px] text-slate-400 mt-4 leading-normal">
+            ※上記以外も急患、及び当店でお買い上げいただいた医薬品の緊急問い合わせには24時間電話で対応しております。
+          </p>
+        </div>
+
+        {/* PMDA救済制度 */}
+        <div className="bg-gradient-to-br from-teal-50 to-emerald-50 border border-emerald-100 rounded-2xl p-6 shadow-xs flex flex-col justify-between" id="info-pmda-card">
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3 text-teal-800">
+              <div className="bg-teal-100 text-teal-800 p-2 rounded-lg">
+                <Shield className="h-4 w-4" />
+              </div>
+              <h3 className="font-bold text-base text-teal-950">救済制度 (PMDA)</h3>
+            </div>
+            <p className="text-xs text-slate-700 leading-normal">
+              {COMPLIANCE_INFO.pmda.description}
+            </p>
+            <div className="bg-white/80 rounded-xl p-3 border border-teal-100 space-y-1">
+              <div className="text-[10px] font-bold text-teal-800 uppercase tracking-widest">医薬品副作用被害救済制度</div>
+              <div className="text-base font-black text-teal-900 text-center">{COMPLIANCE_INFO.pmda.hotline}</div>
+              <div className="text-[9px] text-slate-500 text-center">受付: {COMPLIANCE_INFO.pmda.hours}</div>
+            </div>
+          </div>
+          <div className="text-[10px] text-teal-700/80 mt-2 font-medium">※詳しくは店内の提示、または薬剤師へお尋ねください。</div>
+        </div>
+      </section>
+
+      {/* Online Sales Compliance Guidelines */}
+      <section className="bg-white rounded-2xl border border-slate-100 p-6 sm:p-8 shadow-sm space-y-6" id="compliance-rules-section">
+        <div className="flex items-center space-x-3 pb-4 border-b border-slate-100">
+          <Scale className="h-6 w-6 text-emerald-600" />
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-900">医薬品のインターネット販売に関する表示等</h2>
+        </div>
+
+        <div className="prose prose-slate max-w-none text-sm text-slate-600 leading-relaxed space-y-4">
+          <p>
+            日本の医薬品医療機器等法（旧薬事法）に基づき、当店京和薬局における一般用医薬品の安全販売規律を以下のように公開・厳守しております。
+          </p>
+          
+          <div className="overflow-x-auto border border-slate-100 rounded-xl">
+            <table className="min-w-full divide-y divide-slate-100 text-xs sm:text-sm">
+              <thead className="bg-slate-50">
+                <tr>
+                  <th className="px-4 py-3 text-left font-bold text-slate-700">区分・要件</th>
+                  <th className="px-4 py-3 text-left font-bold text-slate-700">対応資格者</th>
+                  <th className="px-4 py-3 text-left font-bold text-slate-700">説明義務・対応</th>
+                  <th className="px-4 py-3 text-left font-bold text-slate-700">製品陳列</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 bg-white">
+                <tr>
+                  <td className="px-4 py-3 font-semibold text-emerald-805">指定第2類医薬品</td>
+                  <td className="px-4 py-3">薬剤師・登録販売者</td>
+                  <td className="px-4 py-3">禁忌の確認および注意（勧告）の徹底を行う。小児・妊婦への厳重注意。</td>
+                  <td className="px-4 py-3">情報提供場所から7m以内の範囲に陳列・隔離</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 font-semibold text-slate-900">第2類医薬品</td>
+                  <td className="px-4 py-3">薬剤師・登録販売者</td>
+                  <td className="px-4 py-3">適切な用法、副作用の対応に関して努力義務による情報提供・説明。</td>
+                  <td className="px-4 py-3">指定席に区分して陳列を徹底</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 font-semibold text-slate-900">第3類医薬品</td>
+                  <td className="px-4 py-3">薬剤師・登録販売者</td>
+                  <td className="px-4 py-3">義務はないが、要望に応じて適切な回答・アドバイスを行う。</td>
+                  <td className="px-4 py-3">区分して陳列</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="bg-amber-50 border border-amber-200/60 rounded-xl p-4 text-amber-900 space-y-2">
+            <h4 className="font-bold flex items-center gap-1.5 text-sm">
+              <HelpCircle className="h-4 w-4 text-amber-700" />
+              指定第2類医薬品の禁忌確認・注意を徹底しています
+            </h4>
+            <p className="text-xs leading-relaxed text-amber-950">
+              指定第2類医薬品（かぜ薬や鎮痛薬など）はパッケージに<strong>「第[2]類医薬品」</strong>または<strong>「第②類医薬品」</strong>と記載されています。これらは体調や年齢により、重篤な副作用や禁忌が生じることがあります。
+              <strong>小児、妊婦、授乳婦、重い持病をお持ちの方、ご高齢者、他薬服用者</strong>は特に重要な確認が必要ですので、必ず添付文章を確認のうえ、当薬剤師へご相談（注意勧告）ください。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance / Accordions Controls for Policy and Act details */}
+      <section className="space-y-4">
+        {/* Privacy Policy Toggle Button */}
+        <div className="border border-slate-100 bg-white rounded-xl shadow-xs overflow-hidden">
+          <button
+            onClick={() => setShowPrivacy(!showPrivacy)}
+            id="privacy-toggle-btn"
+            className="w-full flex justify-between items-center px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition cursor-pointer"
+          >
+            <span className="flex items-center gap-2">
+              <FileText className="h-5 w-5 text-emerald-600" />
+              個人情報保護方針（プライバシーポリシー）
+            </span>
+            <span className="text-xs text-slate-400">{showPrivacy ? '閉じる ▲' : '展開する ▼'}</span>
+          </button>
+          
+          {showPrivacy && (
+            <div className="px-6 py-4 border-t border-slate-100 bg-slate-50/50 text-xs sm:text-sm text-slate-600 leading-relaxed whitespace-pre-line" id="privacy-policy-text">
+              {COMPLIANCE_INFO.privacyPolicy}
+            </div>
+          )}
+        </div>
+
+        {/* Specified Commercial Transaction Act Toggle Button */}
+        <div className="border border-slate-100 bg-white rounded-xl shadow-xs overflow-hidden">
+          <button
+            onClick={() => setShowTokusho(!showTokusho)}
+            id="tokusho-toggle-btn"
+            className="w-full flex justify-between items-center px-6 py-4 text-left font-bold text-slate-800 hover:bg-slate-50 transition cursor-pointer"
+          >
+            <span className="flex items-center gap-2">
+              <Scale className="h-5 w-5 text-emerald-600" />
+              特定商取引法に基づく表示
+            </span>
+            <span className="text-xs text-slate-400">{showTokusho ? '閉じる ▲' : '展開する ▼'}</span>
+          </button>
+          
+          {showTokusho && (
+            <div className="px-6 py-4 border-t border-slate-100 bg-slate-50/50 text-xs sm:text-sm" id="tokusho-content">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {COMPLIANCE_INFO.tokushoho.map((item, idx) => (
+                  <div key={idx} className="border-b border-slate-100 pb-2">
+                    <div className="font-extrabold text-slate-900 mb-0.5">{item.label}</div>
+                    <div className="text-slate-600">{item.value}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+    </div>
+  );
+}

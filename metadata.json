@@ -1,0 +1,6 @@
+{
+  "name": "京和薬局",
+  "description": "京和薬局株式会社の公式ウェブサイト。大阪府大阪市中央区島之内の薬局。第2類・第3類・指定第2類医薬品の販売、店舗紹介、AIお薬相談窓口。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
