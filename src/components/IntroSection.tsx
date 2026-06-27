@@ -3,8 +3,8 @@ import { COMPLIANCE_INFO } from '../data';
 import { Award, Briefcase, ShieldCheck } from 'lucide-react';
 
 // Relative image paths as static asset strings to bypass TypeScript JPG loading complaints
-const exteriorImg = '/src/assets/images/pharmacy_exterior_1781760316689.jpg';
-const shelvesImg = '/src/assets/images/pharmacy_shelves_1781760333177.jpg';
+const exteriorImg = 'https://i.postimg.cc/x162cmQQ/deb4efc8e1084142294e787d05ec952b.jpg';
+const shelvesImg = 'https://i.postimg.cc/fRR4nbdD/f6aba635e93500400e7eb1dd518e4905.jpg';
 
 export default function IntroSection() {
   return (
@@ -57,14 +57,14 @@ export default function IntroSection() {
         <div className="lg:col-span-1 bg-white rounded-2xl border border-slate-100 p-6 shadow-sm flex flex-col items-center text-center space-y-4" id="pharmacist-intro-card">
           <div className="relative">
             <div className="h-24 w-24 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-800 text-3xl font-extrabold shadow-inner">
-              山田
+              村上
             </div>
             <div className="absolute bottom-0 right-0 bg-emerald-500 text-white p-1.5 rounded-full border border-white">
               <Briefcase className="h-4 w-4" />
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-bold text-slate-900">山田 和也</h3>
+            <h3 className="text-xl font-bold text-slate-900">村上 恵子</h3>
             <p className="text-xs text-emerald-600 font-semibold mb-1">管理薬剤師 / 店舗運営責任者</p>
             <p className="text-[11px] text-slate-400">登録番号: 薬剤師名簿登録 第123456号</p>
           </div>

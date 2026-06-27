@@ -12,14 +12,11 @@ export default function NewsSection() {
 
       <div className="space-y-6">
         {SAMPLE_NEWS.map((item) => {
-          const isAI = item.title.includes('AI');
           return (
             <article 
               key={item.id} 
               id={`news-item-${item.id}`}
-              className={`bg-white rounded-2xl p-6 border transition hover:shadow-md cursor-pointer ${
-                isAI ? 'border-amber-200 shadow-xs' : 'border-slate-100 shadow-xs'
-              }`}
+              className="bg-white rounded-2xl p-6 border border-slate-100 shadow-xs transition hover:shadow-md cursor-pointer"
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                 <div className="flex items-center space-x-3 text-xs text-slate-400">
@@ -39,12 +36,6 @@ export default function NewsSection() {
                     {item.category}
                   </span>
                 </div>
-                
-                {isAI && (
-                  <span className="self-start sm:self-auto bg-amber-500 text-slate-950 text-[10px] uppercase font-bold px-2.5 py-0.5 rounded-full flex items-center gap-0.5 animate-pulse">
-                    <Sparkles className="h-3 w-3" /> 新機能 査 AI
-                  </span>
-                )}
               </div>
 
               <h3 className="text-lg font-bold text-slate-950 mb-2 leading-snug">

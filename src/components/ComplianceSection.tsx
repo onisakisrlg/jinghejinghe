@@ -95,7 +95,7 @@ export default function ComplianceSection() {
                   <span className="font-extrabold text-slate-600 block sm:col-span-1">薬局開設者の名称等</span>
                   <div className="sm:col-span-2 text-slate-900 space-y-1">
                     <p className="font-bold">{COMPLIANCE_INFO.pharmacyName}</p>
-                    <p className="text-xs text-slate-600">代表取締役：山田 和也</p>
+                    <p className="text-xs text-slate-600">代表取締役：村上 恵子</p>
                   </div>
                 </div>
 
@@ -146,7 +146,7 @@ export default function ComplianceSection() {
                       <span className="bg-emerald-600 text-white font-bold text-[9px] px-1.5 py-0.5 rounded mr-1.5 inline-block">特定販売（ネット窓口）を行う時間</span>
                       <p className="text-xs inline font-extrabold text-emerald-800">24時間注文受付（Webサイト経由）</p>
                       <p className="text-[10px] text-slate-600 leading-normal">
-                        ・相談対応時間：実店舗の営業時間内に準じ、薬剤師が電話（06-6121-2982）またはメール、お薬相談（AI薬剤師連携）にて随時対応します。
+                        ・相談対応時間：実店舗の営業時間内に準じ、薬剤師が電話（06-6121-2982）またはメールにて随時対応します。
                         <br />
                         ・上記営業時間外でも、深夜などの急用は24時間緊急連絡先【080-4921-8899】にてお薬の安全に関するご相談が可能です。
                       </p>
@@ -267,7 +267,7 @@ export default function ComplianceSection() {
               <span className="text-emerald-700 font-extrabold text-xs tracking-wide">● 有資格者常駐証明</span>
               <h4 className="font-extrabold text-base text-slate-900 mt-0.5">現在勤務している薬剤師又は登録販売者の別及び氏名</h4>
               <p className="text-slate-400 text-xs mt-1">
-                対面販売、インターネット経由の特定販売相談、AI薬剤師の安全監査の監督を担っている資格者名簿。
+                対面販売、インターネット経由の特定販売相談の監督を担っている資格者名簿。
               </p>
             </div>
 
@@ -289,11 +289,11 @@ export default function ComplianceSection() {
                       </span>
                     </td>
                     <td className="p-3">
-                      <div className="font-bold text-slate-900">山田 和也</div>
+                      <div className="font-bold text-slate-900">村上 恵子</div>
                       <div className="text-[10px] text-slate-400">登録番号：第123456号</div>
                     </td>
                     <td className="p-3 leading-relaxed">
-                      店舗統括管理、医薬品販売説明、セルフメディケーション指導、AIお薬監査システムの最終処方確認
+                      店舗統括管理、医薬品販売説明、セルフメディケーション指導、最終処方確認
                     </td>
                     <td className="p-3 text-right">
                       <span className="inline-flex items-center gap-1 text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full animate-pulse">
@@ -325,7 +325,7 @@ export default function ComplianceSection() {
             </div>
             
             <p className="bg-amber-50/70 border border-amber-100 p-3 rounded-xl text-[11px] text-amber-900">
-              ※特定販売におけるご注文・相談についても、常に現役の「薬剤師」山田または鈴木が店舗営業時間内に順次リアルタイム審査、包装適合性チェックを行ったのちに発送手配をさせて頂きます。
+              ※特定販売におけるご注文・相談についても、常に現役の「薬剤師」村上が店舗営業時間内に順次リアルタイム審査、包装適合性チェックを行ったのちに発送手配をさせて頂きます。
             </p>
           </section>
 
@@ -491,7 +491,7 @@ export default function ComplianceSection() {
               <ul className="space-y-2 text-[11px] text-slate-300">
                 <li className="flex items-start gap-2 text-emerald-400 font-bold">
                   <span className="h-4 w-4 rounded bg-emerald-500 text-slate-950 flex items-center justify-center text-[9px] font-black">✓</span>
-                  <span>ホームページのトップページ：実店舗、お問合せ（AI相談窓口）、許可情報を一元配置</span>
+                  <span>ホームページのトップページ：実店舗、お問合せ窓口、許可情報を一元配置</span>
                 </li>
                 <li className="flex items-start gap-2 text-emerald-400 font-bold">
                   <span className="h-4 w-4 rounded bg-emerald-500 text-slate-950 flex items-center justify-center text-[9px] font-black">✓</span>
@@ -567,7 +567,7 @@ export default function ComplianceSection() {
                     相談すること物・注意事項
                   </span>
                   <p className="text-xs text-slate-705 leading-relaxed">
-                    医師若しくは歯科医師の治療を受けている人、又は本人若しくは家族がアレルギー体質の方は、ご使用前に主治医やお薬相談窓口（実地の管理薬剤師または本AI薬剤師窓口）へ必ずご相談の上で決定してください。
+                    医師若しくは歯科医師の治療を受けている人、又は本人若しくは家族がアレルギー体質の方は、ご使用前に主治医やお薬相談窓口（実地の管理薬剤師）へ必ずご相談の上で決定してください。
                   </p>
                 </div>
 

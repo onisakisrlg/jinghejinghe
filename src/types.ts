@@ -5,6 +5,8 @@ export interface Drug {
   name: string;
   kana: string;
   category: DrugCategory;
+  price: string;
+  janCode: string;
   description: string;
   effects: string; // 効能・効果
   usage: string; // 用法・用量
@@ -19,12 +21,4 @@ export interface NewsItem {
   category: '営業案内' | 'お知らせ' | '健康情報';
   title: string;
   content: string;
-}
-
-export interface ChatMessage {
-  id: string;
-  role: 'user' | 'assistant';
-  content: string;
-  timestamp: string;
-  isDemo?: boolean;
 }

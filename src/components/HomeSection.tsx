@@ -1,10 +1,12 @@
 import React from 'react';
 import { COMPLIANCE_INFO } from '../data';
 import { Clock, MapPin, Shield, HelpCircle, FileText, Scale } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function HomeSection({ setActiveSection }: { setActiveSection: (section: string) => void }) {
   const [showPrivacy, setShowPrivacy] = React.useState(false);
   const [showTokusho, setShowTokusho] = React.useState(false);
+  const { t } = useLanguage();
 
   return (
     <div id="home-section" className="space-y-12 animate-fade-in">
@@ -16,11 +18,11 @@ export default function HomeSection({ setActiveSection }: { setActiveSection: (s
             <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span>大阪市中央区島之内の地域密着型薬局</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
-            健康と笑顔を結ぶ、<br /><span className="text-emerald-400">京和薬局</span>は街の保健室です。
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight whitespace-pre-line">
+            {t('home.hero.title')}
           </h1>
           <p className="text-emerald-100/90 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-light">
-            京和薬局株式会社は、一般用医薬品（第2類・指定第2類・第3類）の確実なご案内を通じて、地域の皆様のセルフメディケーションをサポートします。
+            {t('home.hero.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
             <button
@@ -28,15 +30,14 @@ export default function HomeSection({ setActiveSection }: { setActiveSection: (s
               id="hero-products-btn"
               className="bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg shadow-emerald-950/20 transition-all duration-200 cursor-pointer text-sm"
             >
-              取扱い医薬品を見る
+              {t('home.hero.btn.products')}
             </button>
             <button
               onClick={() => setActiveSection('contact')}
-              id="hero-pharmacist-btn"
+              id="hero-contact-btn"
               className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-xl border border-white/20 hover:border-white/40 transition duration-200 cursor-pointer text-sm flex items-center justify-center gap-2"
             >
-              <span>AIお薬相談窓口に相談</span>
-              <span className="bg-amber-400 text-slate-900 text-[10px] uppercase font-bold px-1.5 py-0.5 rounded-full">査 AI</span>
+              <span>{t('home.hero.btn.contact')}</span>
             </button>
           </div>
         </div>
@@ -51,11 +52,11 @@ export default function HomeSection({ setActiveSection }: { setActiveSection: (s
               <div className="bg-emerald-50 p-2.5 rounded-lg">
                 <MapPin className="h-5 w-5 text-emerald-600" />
               </div>
-              <h3 className="font-bold text-lg text-slate-900">所在地・店舗位置</h3>
+              <h3 className="font-bold text-lg text-slate-900">{t('home.info.address')}</h3>
             </div>
             <p className="text-slate-600 text-sm leading-relaxed">
               〒542-0082<br />
-              <strong className="text-slate-950">{COMPLIANCE_INFO.address}</strong>
+              <strong className="text-slate-950">{t('home.info.address.detail')}</strong>
             </p>
             <p className="text-xs text-slate-500">
               ※長堀橋駅出口から徒歩すぐ、交通アクセスの良い長堀小谷マンションの1階です。気軽にお立ち寄りください。
@@ -82,15 +83,12 @@ export default function HomeSection({ setActiveSection }: { setActiveSection: (s
               <div className="bg-emerald-50 p-2.5 rounded-lg">
                 <Clock className="h-5 w-5 text-emerald-600" />
               </div>
-              <h3 className="font-bold text-lg text-slate-900">営業時間のご案内</h3>
+              <h3 className="font-bold text-lg text-slate-900">{t('home.info.hours')}</h3>
             </div>
             <div className="space-y-2">
-              {COMPLIANCE_INFO.businessHours.map((item, idx) => (
-                <div key={idx} className="flex justify-between items-center text-sm py-2 border-b border-dashed border-slate-100 last:border-none">
-                  <span className="text-slate-600 font-medium">{item.day}</span>
-                  <span className={`font-semibold ${item.hours.includes('休業') ? 'text-red-500' : 'text-slate-900'}`}>{item.hours}</span>
-                </div>
-              ))}
+              <div className="flex justify-between items-center text-sm py-2 border-b border-dashed border-slate-100 last:border-none">
+                <span className="text-slate-600 font-medium">{t('home.info.hours.detail')}</span>
+              </div>
             </div>
           </div>
           <p className="text-[11px] text-slate-400 mt-4 leading-normal">

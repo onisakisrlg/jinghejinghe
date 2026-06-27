@@ -8,9 +8,11 @@ import ContactSection from './components/ContactSection';
 import ComplianceSection from './components/ComplianceSection';
 import { HeartPulse, MapPin, Phone, Scale, ShieldAlert } from 'lucide-react';
 import { COMPLIANCE_INFO } from './data';
+import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 
-export default function App() {
+function AppContent() {
   const [activeSection, setActiveSection] = useState<string>('home');
+  const { t } = useLanguage();
 
   const renderSection = () => {
     switch (activeSection) {
@@ -86,7 +88,7 @@ export default function App() {
             <div className="space-y-2 text-slate-400">
               <p>・<strong>許可の区分：</strong>店舗販売業（医薬品のインターネット販売を含む）</p>
               <p>・<strong>所管：</strong>大阪市（指令大保 第20V00088号）</p>
-              <p>・<strong>店舗の管理者：</strong>管理薬剤師 山田 和也</p>
+              <p>・<strong>店舗の管理者：</strong>管理薬剤師 村上 恵子</p>
               <p>・<strong>取扱い区分：</strong>指定第2類医薬品・第2類医薬品・第3類医薬品</p>
             </div>
           </div>
@@ -98,7 +100,7 @@ export default function App() {
               お薬に関する重要な注意事項
             </h4>
             <p className="text-slate-400 leading-normal">
-              一般用医薬品の服用・使用前の安全管理として、お薬パッケージに同梱の添付文書（説明書）の禁忌項目（してはいけないこと、相談すること）を必ずご確認ください。指定第2類、第2類、第3類に関する注意喚起は、当サイトの AI 薬剤師（相談窓口）にて24時間ガイダンスも公開しております。
+              一般用医薬品の服用・使用前の安全管理として、お薬パッケージに同梱の添付文書（説明書）の禁忌項目（してはいけないこと、相談すること）を必ずご確認ください。指定第2類、第2類、第3類に関する注意喚起は、実地薬剤師へお問い合わせください。
             </p>
           </div>
         </div>
@@ -107,14 +109,22 @@ export default function App() {
         <div className="max-w-7xl mx-auto pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[10px]">
           <p>© 2026 京和薬局株式会社. All Rights Reserved. (Kyohe Pharmacy Co., Ltd. Osaka Japan)</p>
           <div className="flex gap-4">
-            <button onClick={() => setActiveSection('home')} className="hover:text-emerald-450 cursor-pointer">ホーム</button>
-            <button onClick={() => setActiveSection('products')} className="hover:text-emerald-450 cursor-pointer">取扱い薬品</button>
-            <button onClick={() => setActiveSection('intro')} className="hover:text-emerald-450 cursor-pointer">有資格者紹介</button>
-            <button onClick={() => setActiveSection('compliance')} className="hover:text-emerald-450 cursor-pointer">特定販売公示</button>
-            <button onClick={() => setActiveSection('contact')} className="hover:text-emerald-450 cursor-pointer">お問合せ</button>
+            <button onClick={() => setActiveSection('home')} className="hover:text-emerald-450 cursor-pointer">{t('nav.home')}</button>
+            <button onClick={() => setActiveSection('products')} className="hover:text-emerald-450 cursor-pointer">{t('nav.products')}</button>
+            <button onClick={() => setActiveSection('intro')} className="hover:text-emerald-450 cursor-pointer">{t('nav.intro')}</button>
+            <button onClick={() => setActiveSection('compliance')} className="hover:text-emerald-450 cursor-pointer">{t('nav.compliance')}</button>
+            <button onClick={() => setActiveSection('contact')} className="hover:text-emerald-450 cursor-pointer">{t('nav.contact')}</button>
           </div>
         </div>
       </footer>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 }

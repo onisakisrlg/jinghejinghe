@@ -1,5 +1,6 @@
 import React from 'react';
-import { HeartPulse, Menu, X, Sparkles } from 'lucide-react';
+import { HeartPulse, Menu, X, Globe } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface NavbarProps {
   activeSection: string;
@@ -8,15 +9,22 @@ interface NavbarProps {
 
 export default function Navbar({ activeSection, setActiveSection }: NavbarProps) {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [isLangOpen, setIsLangOpen] = React.useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const navItems = [
-    { id: 'home', label: 'ホーム' },
-    { id: 'products', label: '商品分類・お薬一覧' },
-    { id: 'intro', label: '店舗・薬剤師紹介' },
-    { id: 'compliance', label: '特定販売公示' },
-    { id: 'news', label: '新着情報' },
-    { id: 'contact', label: 'お問合せ・AI相談' }
+    { id: 'home', label: t('nav.home') },
+    { id: 'products', label: t('nav.products') },
+    { id: 'intro', label: t('nav.intro') },
+    { id: 'compliance', label: t('nav.compliance') },
+    { id: 'news', label: t('nav.news') },
+    { id: 'contact', label: t('nav.contact') }
   ];
+
+  const handleLangChange = (lang: 'ja' | 'en' | 'zh') => {
+    setLanguage(lang);
+    setIsLangOpen(false);
+  };
 
   return (
     <nav id="kyohe-navbar text-slate-800 bg-white border-b border-emerald-100 sticky top-0 z-40 shadow-sm" className="bg-white border-b border-emerald-100 sticky top-0 z-40 shadow-sm">
@@ -53,16 +61,51 @@ export default function Navbar({ activeSection, setActiveSection }: NavbarProps)
               >
                 <span className="flex items-center gap-1">
                   {item.label}
-                  {item.id === 'contact' && (
-                    <Sparkles className="h-3.5 w-3.5 text-amber-500 animate-pulse" />
-                  )}
                 </span>
               </button>
             ))}
+            
+            {/* Language Switcher Desktop */}
+            <div className="relative ml-4">
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="flex items-center gap-1 text-slate-600 hover:text-emerald-700 px-3 py-2 rounded-lg transition duration-200 cursor-pointer hover:bg-slate-50"
+              >
+                <Globe className="h-4 w-4" />
+                <span className="text-sm font-medium uppercase">{language}</span>
+              </button>
+              
+              {isLangOpen && (
+                <div className="absolute right-0 mt-2 w-32 bg-white rounded-xl shadow-lg border border-slate-100 py-1 z-50 overflow-hidden">
+                  <button onClick={() => handleLangChange('ja')} className="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 cursor-pointer">日本語 (JA)</button>
+                  <button onClick={() => handleLangChange('en')} className="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 cursor-pointer">English (EN)</button>
+                  <button onClick={() => handleLangChange('zh')} className="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 cursor-pointer">简体中文 (ZH)</button>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center md:hidden space-x-2">
+            {/* Language Switcher Mobile */}
+            <div className="relative">
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="text-slate-600 p-2 rounded-lg hover:bg-slate-50 transition cursor-pointer flex items-center"
+              >
+                <Globe className="h-5 w-5" />
+                <span className="ml-1 text-xs font-bold uppercase">{language}</span>
+              </button>
+              
+              {isLangOpen && (
+                <div className="absolute right-0 mt-2 w-32 bg-white rounded-xl shadow-lg border border-slate-100 py-1 z-50 overflow-hidden">
+                  <button onClick={() => handleLangChange('ja')} className="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 cursor-pointer">日本語 (JA)</button>
+                  <button onClick={() => handleLangChange('en')} className="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 cursor-pointer">English (EN)</button>
+                  <button onClick={() => handleLangChange('zh')} className="block w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-800 cursor-pointer">简体中文 (ZH)</button>
+                </div>
+              )}
+            </div>
+            
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-slate-600 hover:text-slate-900 p-2 rounded-lg hover:bg-slate-50 transition cursor-pointer"
@@ -95,11 +138,6 @@ export default function Navbar({ activeSection, setActiveSection }: NavbarProps)
               >
                 <span className="flex items-center gap-2">
                   {item.label}
-                  {item.id === 'contact' && (
-                    <span className="bg-amber-100 text-amber-800 text-[10px] px-1.5 py-0.5 rounded-full font-bold flex items-center gap-0.5 animate-pulse">
-                      <Sparkles className="h-2.5 w-2.5" /> AI相談
-                    </span>
-                  )}
                 </span>
               </button>
             ))}
