@@ -1,7 +1,7 @@
 import React from 'react';
 import { SAMPLE_DRUGS, COMPLIANCE_INFO } from '../data';
 import { Drug, DrugCategory } from '../types';
-import { ShieldAlert, Info, HelpCircle, CheckCircle, Search, Sparkles, Check, ChevronDown, ChevronUp, Scale, ShoppingCart } from 'lucide-react';
+import { ShieldAlert, Info, HelpCircle, CheckCircle, Search, Sparkles, Check, ChevronDown, ChevronUp, Scale, Phone } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface ProductSectionProps {
@@ -33,6 +33,16 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
           <div>
             <h2 className="text-2xl font-bold tracking-tight text-slate-900">医薬品区分・取扱い薬品一覧</h2>
             <p className="text-slate-500 text-sm">セルフケアやお悩みに合わせて、正しいリスク区分からお選びください。</p>
+          </div>
+        </div>
+
+        <div className="bg-emerald-50/70 border border-emerald-100 rounded-2xl p-4 flex gap-3 text-emerald-950 text-xs sm:text-sm">
+          <Phone className="h-5 w-5 text-emerald-700 shrink-0 mt-0.5" />
+          <div className="space-y-1">
+            <p className="font-bold text-emerald-900">{t('product.phone_banner_title')}</p>
+            <p className="text-emerald-800 leading-relaxed text-xs">
+              {t('product.phone_banner_desc')}
+            </p>
           </div>
         </div>
 
@@ -117,16 +127,21 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
                 </div>
 
                 <div className="w-full md:w-auto flex flex-row md:flex-col justify-between md:justify-center items-center md:items-end gap-4 md:gap-2 shrink-0 md:pl-6 md:border-l border-slate-100">
-                  <div className="text-2xl font-black text-slate-900 tracking-tight">
-                    {drug.price}
+                  <div className="flex flex-col items-start md:items-end">
+                    <div className="text-2xl font-black text-slate-900 tracking-tight">
+                      {drug.price}
+                    </div>
+                    <span className="text-[10px] text-slate-500 mt-1 whitespace-nowrap">
+                      {t('product.phone_desc_short')}
+                    </span>
                   </div>
-                  <button 
-                    onClick={() => console.log('buy clicked', drug.id)}
-                    className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 px-6 rounded-xl flex items-center gap-2 transition shadow-sm cursor-pointer"
+                  <a 
+                    href="tel:06-6121-2982"
+                    className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 px-6 rounded-xl flex items-center gap-2 transition shadow-sm cursor-pointer text-sm"
                   >
-                    <ShoppingCart className="h-4 w-4" />
+                    <Phone className="h-4 w-4" />
                     <span>{t('product.buy')}</span>
-                  </button>
+                  </a>
                 </div>
               </div>
             );

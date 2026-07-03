@@ -27,7 +27,10 @@ export const translations = {
     'home.info.phone': '電話番号',
     'home.info.phone.detail': '06-6121-2982',
 
-    'product.buy': '購入する',
+    'product.buy': '電話で注文',
+    'product.phone_desc_short': '※お電話でのご注文となります',
+    'product.phone_banner_title': '【お電話でのご注文・ご購入について】',
+    'product.phone_banner_desc': '当店で取り扱っている医薬品は、安全な服用確認のためすべてお電話にてご注文を承っております。「電話で注文」ボタンをタップすると、直接薬局（06-6121-2982）へ発信できます。資格者が親身に対応いたします。',
     'product.search': '風邪薬、漢方、成分などで検索...',
     'product.empty': '該当する医薬品は見つかりませんでした',
     'product.contact': 'お問合せ窓口はこちら'
@@ -60,7 +63,10 @@ export const translations = {
     'home.info.phone': 'Phone',
     'home.info.phone.detail': '06-6121-2982',
 
-    'product.buy': 'Buy',
+    'product.buy': 'Order by Phone',
+    'product.phone_desc_short': '* Ordered via phone call',
+    'product.phone_banner_title': '[ About Purchasing by Phone ]',
+    'product.phone_banner_desc': 'All medicines at our pharmacy are ordered exclusively by phone to ensure safe dosage and consultation. Tap the "Order by Phone" button to dial our pharmacy (06-6121-2982) directly. Our qualified staff is ready to assist you.',
     'product.search': 'Search medicines...',
     'product.empty': 'No matching products found.',
     'product.contact': 'Contact Us'
@@ -93,7 +99,10 @@ export const translations = {
     'home.info.phone': '电话',
     'home.info.phone.detail': '06-6121-2982',
 
-    'product.buy': '购买',
+    'product.buy': '电话购买',
+    'product.phone_desc_short': '※ 仅限电话下单购买',
+    'product.phone_banner_title': '【关于电话订购与购买】',
+    'product.phone_banner_desc': '为确保您的用药安全，本店所有药品均采用电话订购方式。点击“电话购买”按钮可直接拨打药局电话（06-6121-2982），我们的专业药剂人员将竭诚为您服务。',
     'product.search': '搜索药品、感冒药等...',
     'product.empty': '未找到相关药品',
     'product.contact': '联系客服'
