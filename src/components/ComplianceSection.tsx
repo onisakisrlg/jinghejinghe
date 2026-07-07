@@ -139,12 +139,12 @@ export default function ComplianceSection() {
                   <div className="sm:col-span-2 text-slate-900 space-y-2">
                     <div>
                       <span className="bg-amber-600 text-white font-bold text-[9px] px-1.5 py-0.5 rounded mr-1.5 inline-block">実店舗の営業時間</span>
-                      <p className="text-xs inline font-bold">月～金 : 9:30 - 18:00 / 土 : 9:30 - 13:00</p>
-                      <p className="text-[10px] text-slate-500">（日曜日・祝日はお休みとなっております）</p>
+                      <p className="text-xs inline font-bold">月～金 : 9:30 - 13:00</p>
+                      <p className="text-[10px] text-slate-500">（土日・祝日はお休みとなっております）</p>
                     </div>
                     <div className="pt-1 border-t border-dashed border-slate-200">
                       <span className="bg-emerald-600 text-white font-bold text-[9px] px-1.5 py-0.5 rounded mr-1.5 inline-block">特定販売（ネット窓口）を行う時間</span>
-                      <p className="text-xs inline font-extrabold text-emerald-800">営業時間内受付（電話注文）</p>
+                      <p className="text-xs inline font-extrabold text-emerald-800">月～金 : 9:30 - 13:00</p>
                       <p className="text-[10px] text-slate-600 leading-normal">
                         ・相談対応時間：実店舗の営業時間内に準じ、有資格者が電話（06-6121-2982）にて随時対応します。
                       </p>

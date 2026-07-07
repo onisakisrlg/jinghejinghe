@@ -7,9 +7,8 @@ export const COMPLIANCE_INFO = {
   fax: "06-6121-2983",
   email: "kyowapharmacy@outlook.jp",
   businessHours: [
-    { day: "月曜〜金曜 (Mon-Fri)", hours: "9:00 - 19:00" },
-    { day: "土曜 (Sat)", hours: "9:00 - 13:00" },
-    { day: "日曜・祝日 (Sun & Holiday)", hours: "休業 (Closed)" }
+    { day: "月曜〜金曜 (Mon-Fri)", hours: "9:30 - 13:00" },
+    { day: "土日・祝日 (Sat-Sun & Holiday)", hours: "休業 (Closed)" }
   ],
   license: {
     number: "店舗販売業許可 大阪市指令大保 第20V00088号",

@@ -118,64 +118,6 @@ export default function HomeSection({ setActiveSection }: { setActiveSection: (s
         </div>
       </section>
 
-      {/* Online Sales Compliance Guidelines */}
-      <section className="bg-white rounded-2xl border border-slate-100 p-6 sm:p-8 shadow-sm space-y-6" id="compliance-rules-section">
-        <div className="flex items-center space-x-3 pb-4 border-b border-slate-100">
-          <Scale className="h-6 w-6 text-emerald-600" />
-          <h2 className="text-xl sm:text-2xl font-bold text-slate-900">医薬品のインターネット販売に関する表示等</h2>
-        </div>
-
-        <div className="prose prose-slate max-w-none text-sm text-slate-600 leading-relaxed space-y-4">
-          <p>
-            日本の医薬品医療機器等法（旧薬事法）に基づき、当店京和薬局における一般用医薬品の安全販売規律を以下のように公開・厳守しております。
-          </p>
-          
-          <div className="overflow-x-auto border border-slate-100 rounded-xl">
-            <table className="min-w-full divide-y divide-slate-100 text-xs sm:text-sm">
-              <thead className="bg-slate-50">
-                <tr>
-                  <th className="px-4 py-3 text-left font-bold text-slate-700">区分・要件</th>
-                  <th className="px-4 py-3 text-left font-bold text-slate-700">対応資格者</th>
-                  <th className="px-4 py-3 text-left font-bold text-slate-700">説明義務・対応</th>
-                  <th className="px-4 py-3 text-left font-bold text-slate-700">製品陳列</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100 bg-white">
-                <tr>
-                  <td className="px-4 py-3 font-semibold text-emerald-805">指定第2類医薬品</td>
-                  <td className="px-4 py-3">薬剤師・登録販売者</td>
-                  <td className="px-4 py-3">禁忌の確認および注意（勧告）の徹底を行う。小児・妊婦への厳重注意。</td>
-                  <td className="px-4 py-3">情報提供場所から7m以内の範囲に陳列・隔離</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-semibold text-slate-900">第2類医薬品</td>
-                  <td className="px-4 py-3">薬剤師・登録販売者</td>
-                  <td className="px-4 py-3">適切な用法、副作用の対応に関して努力義務による情報提供・説明。</td>
-                  <td className="px-4 py-3">指定席に区分して陳列を徹底</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-semibold text-slate-900">第3類医薬品</td>
-                  <td className="px-4 py-3">薬剤師・登録販売者</td>
-                  <td className="px-4 py-3">義務はないが、要望に応じて適切な回答・アドバイスを行う。</td>
-                  <td className="px-4 py-3">区分して陳列</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div className="bg-amber-50 border border-amber-200/60 rounded-xl p-4 text-amber-900 space-y-2">
-            <h4 className="font-bold flex items-center gap-1.5 text-sm">
-              <HelpCircle className="h-4 w-4 text-amber-700" />
-              指定第2類医薬品の禁忌確認・注意を徹底しています
-            </h4>
-            <p className="text-xs leading-relaxed text-amber-950">
-              指定第2類医薬品（かぜ薬や鎮痛薬など）はパッケージに<strong>「第[2]類医薬品」</strong>または<strong>「第②類医薬品」</strong>と記載されています。これらは体調や年齢により、重篤な副作用や禁忌が生じることがあります。
-              <strong>小児、妊婦、授乳婦、重い持病をお持ちの方、ご高齢者、他薬服用者</strong>は特に重要な確認が必要ですので、必ず添付文章を確認のうえ、当薬剤師へご相談（注意勧告）ください。
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Compliance / Accordions Controls for Policy and Act details */}
       <section className="space-y-4">
         {/* Privacy Policy Toggle Button */}
