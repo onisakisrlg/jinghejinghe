@@ -13,6 +13,7 @@ export interface Drug {
   ingredients: string; // 成分・分量
   warnings?: string; // 使用上の注意（勧告）
   contraindications?: string; // してはいけないこと（禁忌）
+  imageUrl?: string; // 商品画像
 }
 
 export interface NewsItem {

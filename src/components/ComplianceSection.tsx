@@ -139,12 +139,12 @@ export default function ComplianceSection() {
                   <div className="sm:col-span-2 text-slate-900 space-y-2">
                     <div>
                       <span className="bg-amber-600 text-white font-bold text-[9px] px-1.5 py-0.5 rounded mr-1.5 inline-block">実店舗の営業時間</span>
-                      <p className="text-xs inline font-bold">月～金 : 9:30 - 13:00</p>
+                      <p className="text-xs inline font-bold">月～金 : 9:00 - 13:00</p>
                       <p className="text-[10px] text-slate-500">（土日・祝日はお休みとなっております）</p>
                     </div>
                     <div className="pt-1 border-t border-dashed border-slate-200">
                       <span className="bg-emerald-600 text-white font-bold text-[9px] px-1.5 py-0.5 rounded mr-1.5 inline-block">特定販売（ネット窓口）を行う時間</span>
-                      <p className="text-xs inline font-extrabold text-emerald-800">月～金 : 9:30 - 13:00</p>
+                      <p className="text-xs inline font-extrabold text-emerald-800">月～金 : 9:00 - 13:00</p>
                       <p className="text-[10px] text-slate-600 leading-normal">
                         ・相談対応時間：実店舗の営業時間内に準じ、有資格者が電話（06-6121-2982）にて随時対応します。
                       </p>
@@ -203,7 +203,7 @@ export default function ComplianceSection() {
                 </span>
                 <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 relative group shadow-sm">
                   <img 
-                    src="/src/assets/images/pharmacy_exterior_1781760316689.jpg" 
+                    src="https://i.postimg.cc/x162cmQQ/deb4efc8e1084142294e787d05ec952b.jpg" 
                     alt="京和薬局の外観写真"
                     className="h-full w-full object-cover"
                     onClick={() => {}}
@@ -212,12 +212,6 @@ export default function ComplianceSection() {
                       e.currentTarget.style.display = 'none';
                     }}
                   />
-                  {/* Dynamic placeholder representation */}
-                  <div className="absolute inset-0 bg-slate-900/10 flex flex-col items-center justify-center text-center p-4">
-                    <Image className="h-8 w-8 text-slate-400 mb-2" />
-                    <span className="text-xs font-bold text-slate-700">【京和薬局 店舗正面外観】</span>
-                    <span className="text-[10px] text-slate-500 mt-1">指令大保 第20V00088号 適合標識掲示中</span>
-                  </div>
                 </div>
                 <p className="text-[11px] text-slate-500 leading-relaxed">
                   店舗の間口は島之内の大通りから容易に視認可能な全面ガラス張り構造となっております。出入口付近には認可を受けた店舗販売業許可証の看板が掲示されています。
@@ -231,18 +225,13 @@ export default function ComplianceSection() {
                 </span>
                 <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 relative group shadow-sm">
                   <img 
-                    src="/src/assets/images/pharmacy_shelves_1781760333177.jpg" 
+                    src="https://i.postimg.cc/fRR4nbdD/f6aba635e93500400e7eb1dd518e4905.jpg" 
                     alt="医薬品の陳列状況写真"
                     className="h-full w-full object-cover"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}
                   />
-                  <div className="absolute inset-0 bg-slate-900/10 flex flex-col items-center justify-center text-center p-4">
-                    <Image className="h-8 w-8 text-slate-400 mb-2" />
-                    <span className="text-xs font-bold text-slate-700">【一般用医薬品 区分陳列区分】</span>
-                    <span className="text-[10px] text-slate-500 mt-1">指定第2類・第2類・第3類の混在なき配置</span>
-                  </div>
                 </div>
                 <p className="text-[11px] text-slate-500 leading-relaxed">
                   一般用医薬品は、スタッフ管理型カウンター付き棚に陳列しております。指定第2類医薬品はカウンターから7m以内の範囲に独立して配置し、資格者の目が完全に行き届く体制です。

@@ -28,6 +28,10 @@ export const translations = {
     'home.info.phone.detail': '06-6121-2982',
 
     'product.buy': '電話で注文',
+    'product.buy.confirm': '電話で注文しますか？',
+    'product.buy.confirm_desc': '発信をタップすると、\n京和薬局 (06-6121-2982)\nへ電話がかかります。',
+    'product.buy.cancel': 'キャンセル',
+    'product.buy.call': '発信',
     'product.phone_desc_short': '※お電話でのご注文となります',
     'product.phone_banner_title': '【お電話でのご注文・ご購入について】',
     'product.phone_banner_desc': '当店で取り扱っている医薬品は、安全な服用確認のためすべてお電話にてご注文を承っております。「電話で注文」ボタンをタップすると、直接薬局（06-6121-2982）へ発信できます。資格者が親身に対応いたします。',
@@ -64,6 +68,10 @@ export const translations = {
     'home.info.phone.detail': '06-6121-2982',
 
     'product.buy': 'Order by Phone',
+    'product.buy.confirm': 'Order by Phone?',
+    'product.buy.confirm_desc': 'Tapping call will dial Kyowa Pharmacy directly at 06-6121-2982.',
+    'product.buy.cancel': 'Cancel',
+    'product.buy.call': 'Call',
     'product.phone_desc_short': '* Ordered via phone call',
     'product.phone_banner_title': '[ About Purchasing by Phone ]',
     'product.phone_banner_desc': 'All medicines at our pharmacy are ordered exclusively by phone to ensure safe dosage and consultation. Tap the "Order by Phone" button to dial our pharmacy (06-6121-2982) directly. Our qualified staff is ready to assist you.',
@@ -100,6 +108,10 @@ export const translations = {
     'home.info.phone.detail': '06-6121-2982',
 
     'product.buy': '电话购买',
+    'product.buy.confirm': '确认电话购买？',
+    'product.buy.confirm_desc': '点击拨打后，将直接致电京和药局（06-6121-2982）。',
+    'product.buy.cancel': '取消',
+    'product.buy.call': '拨打',
     'product.phone_desc_short': '※ 仅限电话下单购买',
     'product.phone_banner_title': '【关于电话订购与购买】',
     'product.phone_banner_desc': '为确保您的用药安全，本店所有药品均采用电话订购方式。点击“电话购买”按钮可直接拨打药局电话（06-6121-2982），我们的专业药剂人员将竭诚为您服务。',

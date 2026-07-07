@@ -12,6 +12,7 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
   const [selectedCategory, setSelectedCategory] = React.useState<DrugCategory | 'すべて'>('すべて');
   const [searchTerm, setSearchTerm] = React.useState('');
   const [expandedItemId, setExpandedItemId] = React.useState<string | null>('c1');
+  const [phoneConfirmOpen, setPhoneConfirmOpen] = React.useState(false);
   const { t } = useLanguage();
 
   const categories: (DrugCategory | 'すべて')[] = ['すべて', '指定第2類医薬品', '第2類医薬品', '第3類医薬品'];
@@ -94,6 +95,18 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
                   isDesignated2 ? 'border-amber-200/80 shadow-xs' : 'border-slate-100 shadow-xs'
                 }`}
               >
+                {/* Drug Image */}
+                {drug.imageUrl && (
+                  <div className="shrink-0 w-24 h-24 sm:w-32 sm:h-32 bg-slate-50 rounded-xl overflow-hidden border border-slate-100">
+                    <img 
+                      src={drug.imageUrl} 
+                      alt={drug.name} 
+                      className="w-full h-full object-cover" 
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                )}
+                
                 <div className="flex-1 space-y-2 w-full">
                   <div className="flex items-center gap-2 flex-wrap">
                     <h3 className="text-lg font-bold text-slate-900 leading-snug">{drug.name}</h3>
@@ -135,13 +148,13 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
                       {t('product.phone_desc_short')}
                     </span>
                   </div>
-                  <a 
-                    href="tel:06-6121-2982"
+                  <button 
+                    onClick={() => setPhoneConfirmOpen(true)}
                     className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 px-6 rounded-xl flex items-center gap-2 transition shadow-sm cursor-pointer text-sm"
                   >
                     <Phone className="h-4 w-4" />
                     <span>{t('product.buy')}</span>
-                  </a>
+                  </button>
                 </div>
               </div>
             );
@@ -295,6 +308,40 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
           </p>
         </div>
       </section>
+
+      {phoneConfirmOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm animate-fade-in">
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-sm overflow-hidden border border-slate-100 p-6 space-y-6">
+            <div className="flex flex-col items-center text-center space-y-4">
+              <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
+                <Phone className="h-8 w-8" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-slate-900">{t('product.buy.confirm')}</h3>
+                <p className="text-sm text-slate-500 mt-2 whitespace-pre-line">
+                  {t('product.buy.confirm_desc')}
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex gap-3">
+              <button
+                onClick={() => setPhoneConfirmOpen(false)}
+                className="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 px-4 rounded-xl transition cursor-pointer"
+              >
+                {t('product.buy.cancel')}
+              </button>
+              <a
+                href="tel:06-6121-2982"
+                onClick={() => setPhoneConfirmOpen(false)}
+                className="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl transition text-center cursor-pointer"
+              >
+                {t('product.buy.call')}
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
