@@ -92,7 +92,7 @@ export default function HomeSection({ setActiveSection }: { setActiveSection: (s
             </div>
           </div>
           <p className="text-[11px] text-slate-400 mt-4 leading-normal">
-            ※上記以外も急患、及び当店でお買い上げいただいた医薬品の緊急問い合わせには24時間電話で対応しております。
+            ※営業時間外のご相談はメールまたはお問い合わせフォームよりご連絡ください。
           </p>
         </div>
 

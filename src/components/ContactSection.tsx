@@ -34,19 +34,7 @@ export default function ContactSection() {
               <div>
                 <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">ファックス番号 (FAX)</span>
                 <span className="text-base font-bold text-slate-900">{COMPLIANCE_INFO.fax}</span>
-                <span className="text-[10px] text-slate-500 block">※24時間受信可能です</span>
-              </div>
-            </div>
-
-            {/* Emergency Contact */}
-            <div className="flex items-start space-x-3.5 bg-red-50 border border-red-100 rounded-xl p-3">
-              <div className="bg-red-100 text-red-700 p-2 rounded-lg shrink-0">
-                <AlertTriangle className="h-4 w-4" />
-              </div>
-              <div>
-                <span className="text-[10px] uppercase font-bold text-red-800 block tracking-wider">深夜・24時間緊急連絡先</span>
-                <span className="text-base font-extrabold text-red-950">{COMPLIANCE_INFO.emergencyTel}</span>
-                <span className="text-[9px] text-red-700 block">※お薬服用後の急な副作用やトラブル等専用ダイヤルです</span>
+                <span className="text-[10px] text-slate-500 block">※随時受信可能です</span>
               </div>
             </div>
 
@@ -58,23 +46,6 @@ export default function ContactSection() {
               <div>
                 <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">電子メール</span>
                 <span className="text-base font-medium text-emerald-805 select-all">{COMPLIANCE_INFO.email}</span>
-              </div>
-            </div>
-
-            {/* LINE Link */}
-            <div className="border border-green-200 bg-green-50/50 rounded-xl p-4 flex items-center justify-between gap-4" id="line-qr-link">
-              <div className="space-y-1">
-                <span className="bg-green-600 text-white font-black text-[9px] px-2 py-0.5 rounded-full inline-block">公式 LINE</span>
-                <h4 className="text-sm font-bold text-slate-900 leading-tight">LINEから処方箋を事前送信</h4>
-                <p className="text-[10px] text-slate-500">
-                  お友達追加のうえ、お手元の処方箋写真を送信いただければ、お呼び出しがスムーズになります。
-                </p>
-              </div>
-              <div className="bg-white shrink-0 p-1.5 border border-green-200 rounded-lg shadow-inner text-center">
-                <div className="h-16 w-16 bg-slate-200 border border-slate-300 rounded flex items-center justify-center text-[10px] font-bold text-slate-500">
-                  [ QR ]
-                </div>
-                <span className="text-[8px] text-green-700 font-bold block mt-1">京和薬局 LINE</span>
               </div>
             </div>
           </div>

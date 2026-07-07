@@ -120,7 +120,7 @@ export default function IntroSection() {
           薬事法および厚生労働省令に基づき、お客様が有資格者（薬剤師・登録販売者）と一般事務スタッフを直ちに見分けられるよう、名札の区分と服装を以下のように徹底しております。
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {COMPLIANCE_INFO.badging.map((item, index) => (
             <div key={index} className="border border-slate-100 p-5 rounded-xl hover:bg-slate-50/40 transition duration-150 space-y-3">
               <span className="inline-block bg-emerald-50 text-emerald-800 text-[10px] tracking-wider uppercase font-extrabold px-2.5 py-0.5 rounded-md">

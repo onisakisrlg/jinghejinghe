@@ -144,11 +144,9 @@ export default function ComplianceSection() {
                     </div>
                     <div className="pt-1 border-t border-dashed border-slate-200">
                       <span className="bg-emerald-600 text-white font-bold text-[9px] px-1.5 py-0.5 rounded mr-1.5 inline-block">特定販売（ネット窓口）を行う時間</span>
-                      <p className="text-xs inline font-extrabold text-emerald-800">24時間注文受付（Webサイト経由）</p>
+                      <p className="text-xs inline font-extrabold text-emerald-800">営業時間内受付（電話注文）</p>
                       <p className="text-[10px] text-slate-600 leading-normal">
-                        ・相談対応時間：実店舗の営業時間内に準じ、薬剤師が電話（06-6121-2982）またはメールにて随時対応します。
-                        <br />
-                        ・上記営業時間外でも、深夜などの急用は24時間緊急連絡先【080-4921-8899】にてお薬の安全に関するご相談が可能です。
+                        ・相談対応時間：実店舗の営業時間内に準じ、有資格者が電話（06-6121-2982）にて随時対応します。
                       </p>
                     </div>
                   </div>
@@ -165,20 +163,13 @@ export default function ComplianceSection() {
                   </div>
                 </div>
 
-                {/* 8. Emergency contact with 24h dial */}
+                {/* 8. Emergency contact */}
                 <div className="py-3.5 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                  <span className="font-extrabold text-slate-600 block sm:col-span-1">お問合せ窓口・緊急連絡</span>
+                  <span className="font-extrabold text-slate-600 block sm:col-span-1">お問合せ窓口</span>
                   <div className="sm:col-span-2 text-slate-900 space-y-2">
                     <div className="flex items-center gap-1">
                       <Phone className="h-4 w-4 text-emerald-600 shrink-0" />
                       <span className="font-bold">店舗 : 06-6121-2982 / FAX : 06-6121-2983</span>
-                    </div>
-                    <div className="flex items-start gap-1 p-2 bg-red-50 text-red-950 border border-red-100 rounded-lg">
-                      <AlertTriangle className="h-4 w-4 text-red-600 shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-black text-xs">24時間緊急案内（副作用等の服用トラブル専用）</p>
-                        <p className="text-sm font-black text-red-900">TEL : {COMPLIANCE_INFO.emergencyTel}</p>
-                      </div>
                     </div>
                     <p className="text-[10px] text-slate-500">
                       ※大阪市中央区保健所などの公的機関のご相談専用ダイヤルも完備し適切に監督を受けております。
@@ -298,25 +289,6 @@ export default function ComplianceSection() {
                     <td className="p-3 text-right">
                       <span className="inline-flex items-center gap-1 text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full animate-pulse">
                         <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full"></span> 店頭在籍中 (対応中)
-                      </span>
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-slate-50/50">
-                    <td className="p-3">
-                      <span className="bg-emerald-100 text-emerald-805 border border-emerald-300 font-bold text-[10px] px-2 py-0.5 rounded-sm">
-                        薬剤師
-                      </span>
-                    </td>
-                    <td className="p-3">
-                      <div className="font-bold text-slate-900">鈴木 恵美</div>
-                      <div className="text-[10px] text-slate-400">登録番号：第234567号</div>
-                    </td>
-                    <td className="p-3 leading-relaxed">
-                      OTC薬情報提供、処方解説、漢方薬・和漢薬の選定相談
-                    </td>
-                    <td className="p-3 text-right">
-                      <span className="inline-flex items-center gap-1 text-xs font-semibold text-slate-450 bg-slate-100 px-2 py-1 rounded-full">
-                        本日非番 (オンコール可能)
                       </span>
                     </td>
                   </tr>
