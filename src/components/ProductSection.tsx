@@ -13,6 +13,7 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
   const [searchTerm, setSearchTerm] = React.useState('');
   const [expandedItemId, setExpandedItemId] = React.useState<string | null>('c1');
   const [phoneConfirmOpen, setPhoneConfirmOpen] = React.useState(false);
+  const [selectedImage, setSelectedImage] = React.useState<{url: string, alt: string} | null>(null);
   const { t } = useLanguage();
 
   const categories: (DrugCategory | 'すべて')[] = ['すべて', '指定第2類医薬品', '第2類医薬品', '第3類医薬品'];
@@ -97,11 +98,14 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
               >
                 {/* Drug Image */}
                 {drug.imageUrl && (
-                  <div className="shrink-0 w-24 h-24 sm:w-32 sm:h-32 bg-slate-50 rounded-xl overflow-hidden border border-slate-100">
+                  <div 
+                    className="shrink-0 w-24 h-24 sm:w-32 sm:h-32 bg-slate-50 rounded-xl overflow-hidden border border-slate-100 cursor-pointer flex items-center justify-center group"
+                    onClick={() => setSelectedImage({ url: drug.imageUrl!, alt: drug.name })}
+                  >
                     <img 
                       src={drug.imageUrl} 
                       alt={drug.name} 
-                      className="w-full h-full object-cover" 
+                      className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" 
                       referrerPolicy="no-referrer"
                     />
                   </div>
@@ -339,6 +343,31 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
                 {t('product.buy.call')}
               </a>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Image Lightbox Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-slate-900/90 backdrop-blur-sm animate-fade-in"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-4xl w-full max-h-[90vh] flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+            <button 
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-12 right-0 md:-right-8 md:-top-8 text-white/70 hover:text-white focus:outline-none transition-colors cursor-pointer"
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img 
+              src={selectedImage.url} 
+              alt={selectedImage.alt} 
+              className="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl"
+              referrerPolicy="no-referrer"
+            />
           </div>
         </div>
       )}
