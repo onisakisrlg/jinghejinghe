@@ -6,6 +6,7 @@ import IntroSection from './components/IntroSection';
 import NewsSection from './components/NewsSection';
 import ContactSection from './components/ContactSection';
 import ComplianceSection from './components/ComplianceSection';
+import PaymentShippingSection from './components/PaymentShippingSection';
 import { HeartPulse, MapPin, Phone, Scale, ShieldAlert } from 'lucide-react';
 import { COMPLIANCE_INFO } from './data';
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
@@ -53,6 +54,9 @@ function AppContent() {
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         {renderSection()}
       </main>
+
+      {/* Payment & Shipping Guidelines Section */}
+      <PaymentShippingSection />
 
       {/* Deep compliance legal Footer wrapper */}
       <footer className="bg-slate-900 text-slate-300 border-t border-slate-950 pt-12 pb-8 px-4 sm:px-6 lg:px-8 text-xs leading-relaxed" id="kyohe-footer">
