@@ -42,7 +42,7 @@ function AppContent() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-4">
           <span className="bg-emerald-500 text-[10px] tracking-wide font-extrabold px-2 py-0.5 rounded-sm uppercase inline-block">法律省令順守</span>
           <p className="leading-none text-[11px]">
-            当店は大阪市認可の「店舗販売業許可（第20V00088号）」に基づき、法令を遵守して医薬品を適正に販売しております。
+            当店は大阪市認可の「店舗販売業許可（第25A00127号）」に基づき、法令を遵守して医薬品を適正に販売しております。
           </p>
         </div>
       </div>
@@ -91,7 +91,7 @@ function AppContent() {
             </h4>
             <div className="space-y-2 text-slate-400">
               <p>・<strong>許可の区分：</strong>店舗販売業（医薬品のインターネット販売を含む）</p>
-              <p>・<strong>所管：</strong>大阪市（指令大保 第20V00088号）</p>
+              <p>・<strong>所管：</strong>大阪市（指令大保 第25A00127号）</p>
               <p>・<strong>店舗の管理者：</strong>管理薬剤師 村上 恵子</p>
               <p>・<strong>取扱い区分：</strong>指定第2類医薬品・第2類医薬品・第3類医薬品</p>
             </div>

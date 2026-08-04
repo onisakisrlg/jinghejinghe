@@ -1,6 +1,6 @@
 import React from 'react';
 import { COMPLIANCE_INFO } from '../data';
-import { Award, Briefcase, ShieldCheck } from 'lucide-react';
+import { Award, Briefcase, ShieldCheck, Info } from 'lucide-react';
 
 // Relative image paths as static asset strings to bypass TypeScript JPG loading complaints
 const exteriorImg = 'https://i.postimg.cc/x162cmQQ/deb4efc8e1084142294e787d05ec952b.jpg';
@@ -108,6 +108,16 @@ export default function IntroSection() {
             <span>※実店舗の許可証原本は薬局内の主カウンター側壁面に常時掲示されております。</span>
           </div>
         </div>
+      </section>
+
+      <section className="bg-white rounded-2xl border border-slate-105 p-6 sm:p-8 shadow-sm space-y-6" id="information-provision-locations">
+        <div className="border-b border-slate-100 pb-3 flex items-center space-x-2">
+          <Info className="h-5 w-5 text-emerald-600" />
+          <h3 className="text-lg sm:text-xl font-bold text-slate-900 font-sans">情報提供場所を複数設置する場合</h3>
+        </div>
+        <p className="text-xs text-slate-500 leading-relaxed">
+          ・当薬局では、調剤された薬剤及び薬局医薬品に関しては、調剤室に近接した位置に情報提供場所を設置し、そこで情報提供を行う。薬局製剤、要指導医薬品、第1類・第2類・第3類医薬品に関しては、①薬局製剤陳列区画に近接、②要指導医薬品陳列区画に近接、③第1類医薬品陳列区画に近接、④指定第2類医薬品の陳列設備から7m以内、⑤指定濫用防止医薬品の陳列設備から7m以内、を満たす位置に情報提供場所を設置し、そこで情報提供を行う。
+        </p>
       </section>
 
       {/* Staff badge classification explanation */}

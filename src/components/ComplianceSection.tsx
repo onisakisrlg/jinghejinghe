@@ -85,7 +85,7 @@ export default function ComplianceSection() {
                   <span className="font-extrabold text-slate-600 block sm:col-span-1">許可の区分・番号</span>
                   <div className="sm:col-span-2 space-y-1 text-slate-900">
                     <p className="font-black">店舗販売業</p>
-                    <p className="text-slate-600 text-xs">大阪市認可 第20V00088号</p>
+                    <p className="text-slate-600 text-xs">大阪市認可 第25A00127号</p>
                     <p className="text-slate-400 text-[10.5px]">（有効期間：{COMPLIANCE_INFO.license.validity}）</p>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ export default function ComplianceSection() {
                   <span className="font-extrabold text-slate-600 block sm:col-span-1">薬局開設者の名称等</span>
                   <div className="sm:col-span-2 text-slate-900 space-y-1">
                     <p className="font-bold">{COMPLIANCE_INFO.pharmacyName}</p>
-                    <p className="text-xs text-slate-600">代表取締役：村上 恵子</p>
+                    <p className="text-xs text-slate-600">代表取締役：張兵</p>
                   </div>
                 </div>
 
@@ -139,12 +139,12 @@ export default function ComplianceSection() {
                   <div className="sm:col-span-2 text-slate-900 space-y-2">
                     <div>
                       <span className="bg-amber-600 text-white font-bold text-[9px] px-1.5 py-0.5 rounded mr-1.5 inline-block">実店舗の営業時間</span>
-                      <p className="text-xs inline font-bold">月～金 : 9:00 - 13:00, 14:00 - 18:00</p>
+                      <p className="text-xs inline font-bold">月～金 : 9:00 - 12:00, 13:00 - 18:00</p>
                       <p className="text-[10px] text-slate-500">（土日・祝日はお休みとなっております）</p>
                     </div>
                     <div className="pt-1 border-t border-dashed border-slate-200">
                       <span className="bg-emerald-600 text-white font-bold text-[9px] px-1.5 py-0.5 rounded mr-1.5 inline-block">特定販売（ネット窓口）を行う時間</span>
-                      <p className="text-xs inline font-extrabold text-emerald-800">月～金 : 9:00 - 13:00, 14:00 - 18:00</p>
+                      <p className="text-xs inline font-extrabold text-emerald-800">月～金 : 9:00 - 12:00, 13:00 - 18:00</p>
                       <p className="text-[10px] text-slate-600 leading-normal">
                         ・相談対応時間：実店舗の営業時間内に準じ、有資格者が電話（06-6121-2982）にて随時対応します。
                       </p>
@@ -174,6 +174,10 @@ export default function ComplianceSection() {
                     <p className="text-[10px] text-slate-500">
                       ※大阪市中央区保健所などの公的機関のご相談専用ダイヤルも完備し適切に監督を受けております。
                     </p>
+                    <div className="pt-2 space-y-0.5 text-xs text-slate-800 font-bold">
+                      <p>緊急連絡先：06-6208-9986</p>
+                      <p>大阪市薬務課の指導グループ：06-6208-9986</p>
+                    </div>
                   </div>
                 </div>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { SAMPLE_DRUGS, COMPLIANCE_INFO } from '../data';
 import { Drug, DrugCategory } from '../types';
-import { ShieldAlert, Info, HelpCircle, CheckCircle, Search, Sparkles, Check, ChevronDown, ChevronUp, Scale, Phone } from 'lucide-react';
+import { ShieldAlert, Info, HelpCircle, CheckCircle, Search, Sparkles, Check, ChevronDown, ChevronUp, Scale, ShoppingCart } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface ProductSectionProps {
@@ -12,7 +12,6 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
   const [selectedCategory, setSelectedCategory] = React.useState<DrugCategory | 'すべて'>('すべて');
   const [searchTerm, setSearchTerm] = React.useState('');
   const [expandedItemId, setExpandedItemId] = React.useState<string | null>('c1');
-  const [phoneConfirmOpen, setPhoneConfirmOpen] = React.useState(false);
   const [selectedImage, setSelectedImage] = React.useState<{url: string, alt: string} | null>(null);
   const { t } = useLanguage();
 
@@ -35,16 +34,6 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
           <div>
             <h2 className="text-2xl font-bold tracking-tight text-slate-900">医薬品区分・取扱い薬品一覧</h2>
             <p className="text-slate-500 text-sm">セルフケアやお悩みに合わせて、正しいリスク区分からお選びください。</p>
-          </div>
-        </div>
-
-        <div className="bg-emerald-50/70 border border-emerald-100 rounded-2xl p-4 flex gap-3 text-emerald-950 text-xs sm:text-sm">
-          <Phone className="h-5 w-5 text-emerald-700 shrink-0 mt-0.5" />
-          <div className="space-y-1">
-            <p className="font-bold text-emerald-900">{t('product.phone_banner_title')}</p>
-            <p className="text-emerald-800 leading-relaxed text-xs">
-              {t('product.phone_banner_desc')}
-            </p>
           </div>
         </div>
 
@@ -148,17 +137,16 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
                     <div className="text-2xl font-black text-slate-900 tracking-tight">
                       {drug.price}
                     </div>
-                    <span className="text-[10px] text-slate-500 mt-1 whitespace-nowrap">
-                      {t('product.phone_desc_short')}
-                    </span>
                   </div>
-                  <button 
-                    onClick={() => setPhoneConfirmOpen(true)}
+                  <a 
+                    href="https://buy.stripe.com/fZubJ2bVn2bM9Yt5DPfrW18"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 px-6 rounded-xl flex items-center gap-2 transition shadow-sm cursor-pointer text-sm"
                   >
-                    <Phone className="h-4 w-4" />
+                    <ShoppingCart className="h-4 w-4" />
                     <span>{t('product.buy')}</span>
-                  </button>
+                  </a>
                 </div>
               </div>
             );
@@ -308,44 +296,10 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
           </div>
           <p className="leading-relaxed">
             上記表示は、医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律等施行規則等に基づき、薬局実店舗およびインターネット等特定販売（オンラインお薬相談含む）における共通事項として掲示しております。<br />
-            <strong>公示責任者：</strong> 京和薬局株式会社 管理薬剤師 村上 恵子（大阪市指令大保 第20V00088号）
+            <strong>公示責任者：</strong> 京和薬局株式会社 管理薬剤師 村上 恵子（大阪市指令大保 第25A00127号）
           </p>
         </div>
       </section>
-
-      {phoneConfirmOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm animate-fade-in">
-          <div className="bg-white rounded-2xl shadow-xl w-full max-w-sm overflow-hidden border border-slate-100 p-6 space-y-6">
-            <div className="flex flex-col items-center text-center space-y-4">
-              <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center">
-                <Phone className="h-8 w-8" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-slate-900">{t('product.buy.confirm')}</h3>
-                <p className="text-sm text-slate-500 mt-2 whitespace-pre-line">
-                  {t('product.buy.confirm_desc')}
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex gap-3">
-              <button
-                onClick={() => setPhoneConfirmOpen(false)}
-                className="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 px-4 rounded-xl transition cursor-pointer"
-              >
-                {t('product.buy.cancel')}
-              </button>
-              <a
-                href="tel:06-6121-2982"
-                onClick={() => setPhoneConfirmOpen(false)}
-                className="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl transition text-center cursor-pointer"
-              >
-                {t('product.buy.call')}
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Image Lightbox Modal */}
       {selectedImage && (
