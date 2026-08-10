@@ -1,6 +1,6 @@
 import React from 'react';
 import { COMPLIANCE_INFO } from '../data';
-import { Clock, MapPin, Shield, HelpCircle, FileText, Scale } from 'lucide-react';
+import { Clock, MapPin, Shield, HelpCircle, FileText, Scale, AlertTriangle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function HomeSection({ setActiveSection }: { setActiveSection: (section: string) => void }) {
@@ -139,6 +139,16 @@ export default function HomeSection({ setActiveSection }: { setActiveSection: (s
               {COMPLIANCE_INFO.privacyPolicy}
             </div>
           )}
+        </div>
+
+        {/* Designated Abuse Prevention Medicine Notice Box */}
+        <div className="border border-slate-100 bg-white rounded-xl shadow-xs p-5 flex items-center space-x-3" id="designated-abuse-prevention-notice">
+          <div className="bg-amber-100 text-amber-800 p-2 rounded-lg shrink-0">
+            <AlertTriangle className="h-5 w-5" />
+          </div>
+          <div className="text-xs sm:text-sm font-bold text-slate-800">
+            指定濫用防止医薬品の特定販売を取り扱わない。
+          </div>
         </div>
 
         {/* Specified Commercial Transaction Act Toggle Button */}

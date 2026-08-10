@@ -12,10 +12,7 @@ export default function PaymentShippingSection() {
       paymentDesc: '以下のお支払い方法がご利用いただけます。',
       paymentMethods: [
         'クレジットカード（VISA、MasterCard、JCBなど）',
-        '銀行振込',
-        '代金引換（手数料がかかる場合があります）',
-        'コンビニ決済',
-        '電子マネー（PayPay、楽天ペイなど）'
+        '銀行振込'
       ],
       paymentNote: '※ご注文後、指定の方法でお支払いをお願いいたします。銀行振込の場合は、ご入金確認後に発送手続きをいたします。',
       
@@ -34,10 +31,7 @@ export default function PaymentShippingSection() {
       paymentDesc: '您可以使用以下支付方式。',
       paymentMethods: [
         '信用卡（VISA、MasterCard、JCB 等）',
-        '银行转账',
-        '货到付款（可能会收取手续费）',
-        '便利店支付',
-        '电子货币（PayPay、乐天支付等）'
+        '银行转账'
       ],
       paymentNote: '※下单后，请按照指定的方式进行支付。如果选择银行转账，我们将在确认收到款项后为您安排发货。',
       
@@ -56,10 +50,7 @@ export default function PaymentShippingSection() {
       paymentDesc: 'The following payment methods are accepted:',
       paymentMethods: [
         'Credit Card (VISA, MasterCard, JCB, etc.)',
-        'Bank Transfer',
-        'Cash on Delivery (Fees may apply)',
-        'Convenience Store Payment',
-        'Electronic Money (PayPay, Rakuten Pay, etc.)'
+        'Bank Transfer'
       ],
       paymentNote: '* Please pay using the designated method after ordering. For bank transfers, shipping will proceed after payment confirmation.',
       

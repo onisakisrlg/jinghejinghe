@@ -130,6 +130,26 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
                       </p>
                     </div>
                   )}
+
+                  {drug.contraindications && (
+                    <div className="bg-amber-50/70 border border-amber-200/80 rounded-xl p-3 text-amber-950 mt-2 text-xs space-y-1.5" id={`contraindications-${drug.id}`}>
+                      <div className="font-bold flex items-center gap-1.5 text-amber-900 text-xs">
+                        <ShieldAlert className="h-4 w-4 text-amber-600 shrink-0" />
+                        <span>{['d3', 'd4', 'd5', 'd6', 'd7', 'd8', 'd9', 'd10', 'd11', 'd13', 'd14'].includes(drug.id) ? t(`drug.${drug.id}.contraindications_title`) : '禁忌・注意事項'}</span>
+                      </div>
+                      <div className="space-y-1 text-amber-950 text-[11px] leading-relaxed pl-5">
+                        {['d3', 'd4', 'd5', 'd6', 'd7', 'd8', 'd9', 'd10', 'd11', 'd13', 'd14'].includes(drug.id) ? (
+                          t(`drug.${drug.id}.contraindications_desc`).split('\n').map((line, idx) => (
+                            <div key={idx}>{line}</div>
+                          ))
+                        ) : (
+                          drug.contraindications.split('\n').slice(1).map((line, idx) => (
+                            <div key={idx}>{line}</div>
+                          ))
+                        )}
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="w-full md:w-auto flex flex-row md:flex-col justify-between md:justify-center items-center md:items-end gap-4 md:gap-2 shrink-0 md:pl-6 md:border-l border-slate-100">

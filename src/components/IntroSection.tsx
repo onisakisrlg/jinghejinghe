@@ -66,7 +66,7 @@ export default function IntroSection() {
           <div>
             <h3 className="text-xl font-bold text-slate-900">村上 恵子</h3>
             <p className="text-xs text-emerald-600 font-semibold mb-1">管理薬剤師 / 店舗運営責任者</p>
-            <p className="text-[11px] text-slate-400">登録番号: 薬剤師名簿登録 第123456号</p>
+            <p className="text-[11px] text-slate-400">登録番号: 薬剤師名簿登録 第234297号</p>
           </div>
           <p className="text-xs text-slate-500 leading-relaxed pt-2 border-t border-slate-100">
             「お薬について分からないこと、ご不安なことがあれば何でも聞いてください。対面での説明義務がある指定第2類医薬品の使用に関しても、分かりやすく丁寧に、安全に服用できるようカウンセリングいたします。」

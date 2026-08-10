@@ -274,7 +274,7 @@ export default function ComplianceSection() {
                     </td>
                     <td className="p-3">
                       <div className="font-bold text-slate-900">村上 恵子</div>
-                      <div className="text-[10px] text-slate-400">登録番号：第123456号</div>
+                      <div className="text-[10px] text-slate-400">登録番号：第234297号</div>
                     </td>
                     <td className="p-3 leading-relaxed">
                       店舗統括管理、医薬品販売説明、セルフメディケーション指導、最終処方確認
@@ -496,6 +496,78 @@ export default function ComplianceSection() {
         </div>
 
       </div>
+
+      {/* Age Verification, Sale Judgment & Support Provisioning Guidelines */}
+      <section className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 sm:p-8 space-y-6" id="compliance-age-verification-policy">
+        <div className="flex items-center space-x-3 border-b border-slate-100 pb-4">
+          <div className="bg-emerald-100 text-emerald-800 p-2.5 rounded-2xl">
+            <ShieldCheck className="h-6 w-6" />
+          </div>
+          <div>
+            <h3 className="font-extrabold text-base sm:text-lg text-slate-900">年齢確認・販売可否判断および支援情報提供に関する方針</h3>
+            <p className="text-xs text-slate-500">医薬品の適正使用と濫用防止のための安全・コンプライアンス体制</p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm">
+          
+          {/* Card 1: Age verification */}
+          <div className="bg-slate-50/80 border border-slate-200/80 rounded-2xl p-5 space-y-3">
+            <div className="font-black text-slate-900 text-sm flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-emerald-600"></span>
+              【システムを活用した年齢確認】
+            </div>
+            <ul className="space-y-2 text-slate-700 leading-relaxed text-xs">
+              <li className="flex items-start gap-1.5">
+                <span className="text-emerald-600 font-bold">〇</span>
+                <span>予め登録済みの身分証（マイナンバー・免許証）等に紐付いた情報により年齢確認</span>
+              </li>
+              <li className="flex items-start gap-1.5">
+                <span className="text-emerald-600 font-bold">〇</span>
+                <span>決済方法による年齢確認（クレジットカード等）</span>
+              </li>
+              <li className="flex items-start gap-1.5">
+                <span className="text-emerald-600 font-bold">〇</span>
+                <span>購入時に身分証を登録</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Card 2: Sale judgment */}
+          <div className="bg-slate-50/80 border border-slate-200/80 rounded-2xl p-5 space-y-3">
+            <div className="font-black text-slate-900 text-sm flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-amber-600"></span>
+              販売の可否判断
+            </div>
+            <ul className="space-y-2 text-slate-700 leading-relaxed text-xs">
+              <li className="flex items-start gap-1.5">
+                <span className="text-amber-600 font-bold">・</span>
+                <span>説明を理解できたかの確認ができないときは販売を行わない</span>
+              </li>
+              <li className="flex items-start gap-1.5">
+                <span className="text-amber-600 font-bold">・</span>
+                <span>購入理由の説明が適切にできないなど、濫用の懸念を持った場合については販売を行わない</span>
+              </li>
+              <li className="flex items-start gap-1.5">
+                <span className="text-amber-600 font-bold">・</span>
+                <span>上記のような内容をビデオ通話やテキストでのやりとり、過去の購入記録等で判断し対応</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Card 3: Support provisioning */}
+          <div className="bg-slate-50/80 border border-slate-200/80 rounded-2xl p-5 space-y-3">
+            <div className="font-black text-slate-900 text-sm flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-blue-600"></span>
+              支援に繋げる情報提供等
+            </div>
+            <p className="text-slate-700 leading-relaxed text-xs pt-1">
+              支援相談窓口や厚生労働省作成リーフレット等の案内URL送付する等して対応する
+            </p>
+          </div>
+
+        </div>
+      </section>
 
       {/* Mandatory popup simulation modal that reviews warnings, proving legal compliance with class II rules */}
       {showDetailDialog && (

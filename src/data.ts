@@ -15,7 +15,7 @@ export const COMPLIANCE_INFO = {
     holder: "京和薬局株式会社",
     registeredLocation: "大阪府大阪市中央区島之内１丁目１４−８ 長堀小谷マンション 1F",
     validity: "令和7年12月23日 から 令和13年12月22日まで",
-    pharmacist: "村上 恵子 (登録番号 第123456号 / 厚生労働省登録)"
+    pharmacist: "村上 恵子 (登録番号 第234297号 / 厚生労働省登録)"
   },
   pmda: {
     name: "独立行政法人 医薬品医療機器総合機構 (PMDA)",
@@ -49,9 +49,7 @@ export const COMPLIANCE_INFO = {
 当社は、保有する個人情報の漏洩、紛失、改ざんを防止するため、スタッフ教育およびセキュリティシステムの保守等、万全の予防・安全管理対策を講じます。
 
 4. 開示・訂正・利用停止
-お客様ご本人から個人情報の開示・訂正・削除のお申し出があった場合は、ご本人であることを確認のうえ、速やかに対応します。
-
-5. 指定濫用防止医薬品の特定販売を行っています。`,
+お客様ご本人から個人情報の開示・訂正・削除のお申し出があった場合は、ご本人であることを確認のうえ、速やかに対応します。`,
 
   tokushoho: [
     { label: "販売業者", value: "京和薬局株式会社" },
@@ -160,12 +158,13 @@ export const SAMPLE_DRUGS: Drug[] = [
     imageUrl: "https://i.postimg.cc/Znv3f84V/c56d73060783500869a5108638add911.jpg",
     kana: "あねろん",
     category: "指定第2類医薬品",
-    price: "¥1,200",
+    price: "¥3,200",
     description: "乗物酔いによる吐き気・めまい・頭痛の予防および緩和に効果的な乗物酔い薬です。",
     effects: "乗物酔いによる吐き気・めまい・頭痛の予防および緩和",
     usage: "15才以上：1回1カプセルを1日1回服用してください。",
     ingredients: "マレイン酸フェニラミン、アミノ安息香酸エチルなど",
-    warnings: "服用後、乗物または機械類の運転操作をしないでください。"
+    warnings: "服用後、乗物または機械類の運転操作をしないでください。",
+    contraindications: "禁忌・注意事項\n* 本剤の成分によりアレルギー症状を起こしたことがある方は使用しないでください。\n* 服用後は眠気があらわれることがあるため、車の運転や危険を伴う機械の操作はしないでください。\n* 他の乗り物酔い薬、かぜ薬、鎮静薬などとの併用は避けてください。\n* 妊娠中・授乳中の方、持病のある方は、使用前に医師または薬剤師にご相談ください。"
   },
   {
     id: "d2",
@@ -174,12 +173,13 @@ export const SAMPLE_DRUGS: Drug[] = [
     imageUrl: "https://i.postimg.cc/ZRGzNmqs/a829530a7fd96f39c09c74155c2e331f.jpg",
     kana: "きゅうしん",
     category: "第2類医薬品",
-    price: "¥3,500",
+    price: "¥6,500",
     description: "どうき、息切れ、気つけに効果を現す生薬製剤です。",
     effects: "どうき、息切れ、気つけ",
     usage: "大人(15才以上)：1回2粒を1日3回、朝夕および就寝前に水またはお湯で服用してください。",
     ingredients: "センソ、ゴオウ、ロクジョウ末など",
-    warnings: "本剤を服用している間は、他の強心薬を服用しないでください。"
+    warnings: "本剤を服用している間は、他の強心薬を服用しないでください。",
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。"
   },
   {
     id: "d3",
@@ -188,11 +188,12 @@ export const SAMPLE_DRUGS: Drug[] = [
     imageUrl: "https://i.postimg.cc/WbfCqjfH/779523728c17b3eb760ccd2236fd7d51.jpg",
     kana: "めんたーむ",
     category: "第3類医薬品",
-    price: "¥450",
+    price: "¥1,450",
     description: "皮膚の表面を被覆して外側からの刺激からお肌を守ります。",
     effects: "すり傷、火傷、しもやけ、虫さされ、そり傷、切り傷、打撲傷、神経痛、かゆみ、靴ずれ、ひび、あかぎれ、筋肉リウマチ、皮膚炎症",
     usage: "適量を患部にかるく塗るか、又はよくすり込んでください。",
-    ingredients: "dl-カンフル、l-メントール、ユーカリ油など"
+    ingredients: "dl-カンフル、l-メントール、ユーカリ油など",
+    contraindications: "禁忌・注意事項\n傷口、目の周囲には使用しないでください。肌に異常が現れた場合は使用を中止してください。"
   },
   {
     id: "d4",
@@ -201,12 +202,13 @@ export const SAMPLE_DRUGS: Drug[] = [
     imageUrl: "https://i.postimg.cc/65T1Xg5L/f5610824670fb9291fb5255fd6f0a99c.jpg",
     kana: "とらべるみんちゅろっぷ",
     category: "第2類医薬品",
-    price: "¥900",
+    price: "¥1,900",
     description: "乗りもの酔いの予防と緩和に、お子様も服用しやすいドロップタイプの薬です。",
     effects: "乗物酔いによるめまい・吐き気・頭痛の予防及び緩和",
     usage: "11才以上15才未満：1回2錠を1日2回まで服用できます。",
     ingredients: "d-クロルフェニラミンマレイン酸塩、スコポラミン臭化水素酸塩水和物",
-    warnings: "服用後、乗物又は機械類の運転操作をしないでください。"
+    warnings: "服用後、乗物又は機械類の運転操作をしないでください。",
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。服用後は運転しないでください。"
   },
   {
     id: "d5",
@@ -215,11 +217,12 @@ export const SAMPLE_DRUGS: Drug[] = [
     imageUrl: "https://i.postimg.cc/RFVLTJWJ/48a7533d4f55c5bbabcb4889d10818bf.jpg",
     kana: "まいてぃあしーえる",
     category: "第3類医薬品",
-    price: "¥600",
+    price: "¥1,600",
     description: "コンタクトレンズを装着しているときの不快感、目の疲れに。",
     effects: "目の疲れ、涙液の補助（目のかわき）、ハードコンタクトレンズ又はソフトコンタクトレンズを装着しているときの不快感、目のかすみ",
     usage: "1回2〜3滴を1日5〜6回点眼してください。",
-    ingredients: "塩化ナトリウム、塩化カリウムなど"
+    ingredients: "塩化ナトリウム、塩化カリウムなど",
+    contraindications: "禁忌・注意事項\n目に傷や強い充血、痛みなどがある場合は使用しないでください。異常が現れた場合は使用を中止してください。"
   },
   {
     id: "d6",
@@ -228,11 +231,12 @@ export const SAMPLE_DRUGS: Drug[] = [
     imageUrl: "https://i.postimg.cc/VvWZNP03/973791465fadd4d2db8dd13b238cf3c9.jpg",
     kana: "もありっぷ",
     category: "第3類医薬品",
-    price: "¥1,000",
+    price: "¥2,000",
     description: "荒れた唇の修復を促す成分を配合したリップクリームです。",
     effects: "口唇のひびわれ、口唇のただれ、口唇炎、口角炎",
     usage: "1日数回、適量を患部に塗布してください。",
-    ingredients: "アラントイン、グリチルレチン酸、ビタミンEなど"
+    ingredients: "アラントイン、グリチルレチン酸、ビタミンEなど",
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。"
   },
   {
     id: "d7",
@@ -241,11 +245,12 @@ export const SAMPLE_DRUGS: Drug[] = [
     imageUrl: "https://i.postimg.cc/jS2TBZBm/098df8d485b77046cc48d6d22b7c5900.jpg",
     kana: "めでぃかるえー",
     category: "第2類医薬品",
-    price: "¥1,500",
+    price: "¥3,500",
     description: "眼疲労の改善に特化した目薬です。",
     effects: "目の疲れ、結膜充血、目のかゆみ、眼病予防",
     usage: "1回1〜3滴、1日5〜6回点眼してください。",
-    ingredients: "ビタミンA、ビタミンE、ビタミンB6など"
+    ingredients: "ビタミンA、ビタミンE、ビタミンB6など",
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。"
   },
   {
     id: "d8",
@@ -254,24 +259,26 @@ export const SAMPLE_DRUGS: Drug[] = [
     imageUrl: "https://i.postimg.cc/HsHsv0Yg/d469d15679264e0661671cfcc54a2b7b.jpg",
     kana: "めでぃかるじゅうに",
     category: "第2類医薬品",
-    price: "¥1,600",
+    price: "¥3,600",
     description: "ピント調節筋と副交感神経に働いて衰えたピント調節機能を高め、目の疲れなどを改善します。",
     effects: "目の疲れ、結膜充血、目のかすみ",
     usage: "1回1〜3滴、1日5〜6回点眼してください。",
-    ingredients: "ネオスチグミンメチル硫酸塩など"
+    ingredients: "ネオスチグミンメチル硫酸塩など",
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。"
   },
   {
     id: "d9",
     janCode: "4987084416902",
     name: "ソフトサンティア",
-    imageUrl: "/images/soft_santear_drops_1783414577300.jpg",
+    imageUrl: "https://i.postimg.cc/MZ4q4cF9/597e8cc43d26400cf73be50f2a7fc4ac.png",
     kana: "そふとさんてぃあ",
     category: "第3類医薬品",
-    price: "¥800",
+    price: "¥1,800",
     description: "涙液に近い性質を持った人工涙液で、涙液不足に伴う目のかわき・異物感などの不快な症状を改善します。",
     effects: "ハードコンタクトレンズまたはソフトコンタクトレンズを装着しているときの不快感、涙液の補助（目のかわき）、目の疲れ、目のかすみ",
     usage: "1回2〜3滴、1日5〜6回点眼してください。",
-    ingredients: "塩化カリウム、塩化ナトリウム"
+    ingredients: "塩化カリウム、塩化ナトリウム",
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。"
   },
   {
     id: "d10",
@@ -280,11 +287,12 @@ export const SAMPLE_DRUGS: Drug[] = [
     imageUrl: "https://i.postimg.cc/h4YfCQJF/ff68fd70c84ae5c43009f7f16311f5b5.jpg",
     kana: "さんてえふえっくす",
     category: "第2類医薬品",
-    price: "¥900",
+    price: "¥1,900",
     description: "目の疲れ・充血に。清涼感のあるさし心地の目薬です。",
     effects: "目の疲れ、結膜充血、目のかゆみ、眼病予防",
     usage: "1回2〜3滴、1日5〜6回点眼してください。",
-    ingredients: "ネオスチグミンメチル硫酸塩、タウリンなど"
+    ingredients: "ネオスチグミンメチル硫酸塩、タウリンなど",
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。"
   },
   {
     id: "d11",
@@ -293,11 +301,12 @@ export const SAMPLE_DRUGS: Drug[] = [
     imageUrl: "https://i.postimg.cc/fb79pzGj/05be937569c6fbb52434bfa278aed9f0.jpg",
     kana: "あんめるつよこよこ",
     category: "第3類医薬品",
-    price: "¥700",
+    price: "¥1,700",
     description: "肩こり・筋肉痛に。塗りやすいボトルです。",
     effects: "肩こり、筋肉痛、筋肉疲労、腰痛、打撲、捻挫、関節痛",
     usage: "1日数回、適量を患部に塗布してください。",
-    ingredients: "サリチル酸グリコール、l-メントールなど"
+    ingredients: "サリチル酸グリコール、l-メントールなど",
+    contraindications: "禁忌・注意事項\n傷口、目の周囲、粘膜には使用しないでください。肌に異常が現れた場合は使用を中止してください。"
   },
   {
     id: "d12",
@@ -306,11 +315,12 @@ export const SAMPLE_DRUGS: Drug[] = [
     imageUrl: "https://i.postimg.cc/xCJcY97g/e8b3bd6b94413907673c1e6df018946a.jpg",
     kana: "へぱりーぜぷらすつー",
     category: "第3類医薬品",
-    price: "¥4,200",
+    price: "¥7,200",
     description: "肝臓水解物やイノシトールが新陳代謝を高めるとともに、胃腸の働きをサポートして滋養強壮効果を発揮します。",
     effects: "滋養強壮、胃腸障害・栄養障害・病中病後・肉体疲労・発熱性消耗性疾患・妊娠授乳期などの場合の栄養補給、虚弱体質",
     usage: "成人（15才以上）：1回3錠、1日2回服用してください。",
-    ingredients: "肝臓水解物、イノシトールなど"
+    ingredients: "肝臓水解物、イノシトールなど",
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。服用後に異常が現れた場合は、使用を中止してください。"
   },
   {
     id: "d13",
@@ -319,11 +329,12 @@ export const SAMPLE_DRUGS: Drug[] = [
     imageUrl: "https://i.postimg.cc/Sj0Qm88G/8a69dc032200a175a0b921fd89db44e9.jpg",
     kana: "ありなみんいーえっくすぷらす",
     category: "第3類医薬品",
-    price: "¥6,500",
+    price: "¥9,500",
     description: "目の疲れ・肩こり・腰の痛みに優れた効果を発揮します。",
     effects: "眼精疲労、筋肉痛・関節痛（肩こり、腰痛、五十肩など）、神経痛、手足のしびれ",
     usage: "15歳以上：1回2〜3錠、1日1回食後すぐに水またはお湯で服用してください。",
-    ingredients: "フルスルチアミン、ピリドキシン塩酸塩など"
+    ingredients: "フルスルチアミン、ピリドキシン塩酸塩など",
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。服用後に異常が現れた場合は、使用を中止してください。"
   },
   {
     id: "d14",
@@ -332,11 +343,12 @@ export const SAMPLE_DRUGS: Drug[] = [
     imageUrl: "https://i.postimg.cc/qqJXjhgK/a506e18bdd447a5594408e619cfc4b58.jpg",
     kana: "ろいひつぼこう",
     category: "第3類医薬品",
-    price: "¥900",
+    price: "¥1,900",
     description: "温感刺激で血行をよくし、肩こり、腰痛などを改善します。",
     effects: "肩のこり、腰の痛み、打撲、捻挫、関節痛、筋肉痛、筋肉疲労、しもやけ、骨折痛",
     usage: "ロイヒつぼ膏の膏面をフィルムからはがし、患部にお貼りください。",
-    ingredients: "サリチル酸メチル、l-メントールなど"
+    ingredients: "サリチル酸メチル、l-メントールなど",
+    contraindications: "禁忌・注意事項\n傷口、湿疹、かぶれ、粘膜には使用しないでください。肌に異常が現れた場合は、使用を中止してください。"
   }
 ];
 
