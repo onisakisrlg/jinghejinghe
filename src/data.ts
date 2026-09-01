@@ -164,7 +164,8 @@ export const SAMPLE_DRUGS: Drug[] = [
     usage: "15才以上：1回1カプセルを1日1回服用してください。",
     ingredients: "マレイン酸フェニラミン、アミノ安息香酸エチルなど",
     warnings: "服用後、乗物または機械類の運転操作をしないでください。",
-    contraindications: "禁忌・注意事項\n* 本剤の成分によりアレルギー症状を起こしたことがある方は使用しないでください。\n* 服用後は眠気があらわれることがあるため、車の運転や危険を伴う機械の操作はしないでください。\n* 他の乗り物酔い薬、かぜ薬、鎮静薬などとの併用は避けてください。\n* 妊娠中・授乳中の方、持病のある方は、使用前に医師または薬剤師にご相談ください。"
+    contraindications: "禁忌・注意事項\n* 本剤の成分によりアレルギー症状を起こしたことがある方は使用しないでください。\n* 服用後は眠気があらわれることがあるため、車の運転や危険を伴う機械の操作はしないでください。\n* 他の乗り物酔い薬、かぜ薬、鎮静薬などとの併用は避けてください。\n* 妊娠中・授乳中の方、持病のある方は、使用前に医師または薬剤師にご相談ください。",
+    buyUrl: "https://buy.stripe.com/6oU00j8X7dRuaVadET8EM0u"
   },
   {
     id: "d2",
@@ -179,7 +180,8 @@ export const SAMPLE_DRUGS: Drug[] = [
     usage: "大人(15才以上)：1回2粒を1日3回、朝夕および就寝前に水またはお湯で服用してください。",
     ingredients: "センソ、ゴオウ、ロクジョウ末など",
     warnings: "本剤を服用している間は、他の強心薬を服用しないでください。",
-    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。"
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。",
+    buyUrl: "https://buy.stripe.com/cNiaEX7T300EfbqfN18EM0t"
   },
   {
     id: "d3",
@@ -193,7 +195,8 @@ export const SAMPLE_DRUGS: Drug[] = [
     effects: "すり傷、火傷、しもやけ、虫さされ、そり傷、切り傷、打撲傷、神経痛、かゆみ、靴ずれ、ひび、あかぎれ、筋肉リウマチ、皮膚炎症",
     usage: "適量を患部にかるく塗るか、又はよくすり込んでください。",
     ingredients: "dl-カンフル、l-メントール、ユーカリ油など",
-    contraindications: "禁忌・注意事項\n傷口、目の周囲には使用しないでください。肌に異常が現れた場合は使用を中止してください。"
+    contraindications: "禁忌・注意事項\n傷口、目の周囲には使用しないでください。肌に異常が現れた場合は使用を中止してください。",
+    buyUrl: "https://buy.stripe.com/7sYcN5flvaFiaVaeIX8EM0s"
   },
   {
     id: "d4",
@@ -208,7 +211,8 @@ export const SAMPLE_DRUGS: Drug[] = [
     usage: "11才以上15才未満：1回2錠を1日2回まで服用できます。",
     ingredients: "d-クロルフェニラミンマレイン酸塩、スコポラミン臭化水素酸塩水和物",
     warnings: "服用後、乗物又は機械類の運転操作をしないでください。",
-    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。服用後は運転しないでください。"
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。服用後は運転しないでください。",
+    buyUrl: "https://buy.stripe.com/8x26oHddn8xagfucAP8EM0g"
   },
   {
     id: "d5",
@@ -222,7 +226,8 @@ export const SAMPLE_DRUGS: Drug[] = [
     effects: "目の疲れ、涙液の補助（目のかわき）、ハードコンタクトレンズ又はソフトコンタクトレンズを装着しているときの不快感、目のかすみ",
     usage: "1回2〜3滴を1日5〜6回点眼してください。",
     ingredients: "塩化ナトリウム、塩化カリウムなど",
-    contraindications: "禁忌・注意事項\n目に傷や強い充血、痛みなどがある場合は使用しないでください。異常が現れた場合は使用を中止してください。"
+    contraindications: "禁忌・注意事項\n目に傷や強い充血、痛みなどがある場合は使用しないでください。異常が現れた場合は使用を中止してください。",
+    buyUrl: "https://buy.stripe.com/28E4gz6OZ14IaVagR58EM0r"
   },
   {
     id: "d6",
@@ -236,7 +241,8 @@ export const SAMPLE_DRUGS: Drug[] = [
     effects: "口唇のひびわれ、口唇のただれ、口唇炎、口角炎",
     usage: "1日数回、適量を患部に塗布してください。",
     ingredients: "アラントイン、グリチルレチン酸、ビタミンEなど",
-    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。"
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。",
+    buyUrl: "https://buy.stripe.com/aFa8wP5KVdRue7mdET8EM0q"
   },
   {
     id: "d7",
@@ -250,7 +256,8 @@ export const SAMPLE_DRUGS: Drug[] = [
     effects: "目の疲れ、結膜充血、目のかゆみ、眼病予防",
     usage: "1回1〜3滴、1日5〜6回点眼してください。",
     ingredients: "ビタミンA、ビタミンE、ビタミンB6など",
-    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。"
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。",
+    buyUrl: "https://buy.stripe.com/00w5kDehr28M3sI9oD8EM0p"
   },
   {
     id: "d8",
@@ -264,7 +271,8 @@ export const SAMPLE_DRUGS: Drug[] = [
     effects: "目の疲れ、結膜充血、目のかすみ",
     usage: "1回1〜3滴、1日5〜6回点眼してください。",
     ingredients: "ネオスチグミンメチル硫酸塩など",
-    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。"
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。",
+    buyUrl: "https://buy.stripe.com/00wdR94GRcNq8N2eIX8EM0n"
   },
   {
     id: "d9",
@@ -278,7 +286,8 @@ export const SAMPLE_DRUGS: Drug[] = [
     effects: "ハードコンタクトレンズまたはソフトコンタクトレンズを装着しているときの不快感、涙液の補助（目のかわき）、目の疲れ、目のかすみ",
     usage: "1回2〜3滴、1日5〜6回点眼してください。",
     ingredients: "塩化カリウム、塩化ナトリウム",
-    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。"
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。",
+    buyUrl: "https://buy.stripe.com/cNi00j4GRfZC7IYbwL8EM0h"
   },
   {
     id: "d10",
@@ -292,7 +301,8 @@ export const SAMPLE_DRUGS: Drug[] = [
     effects: "目の疲れ、結膜充血、目のかゆみ、眼病予防",
     usage: "1回2〜3滴、1日5〜6回点眼してください。",
     ingredients: "ネオスチグミンメチル硫酸塩、タウリンなど",
-    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。"
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。異常が現れた場合は使用を中止してください。",
+    buyUrl: "https://buy.stripe.com/cNifZha1bcNq9R69oD8EM0m"
   },
   {
     id: "d11",
@@ -306,7 +316,8 @@ export const SAMPLE_DRUGS: Drug[] = [
     effects: "肩こり、筋肉痛、筋肉疲労、腰痛、打撲、捻挫、関節痛",
     usage: "1日数回、適量を患部に塗布してください。",
     ingredients: "サリチル酸グリコール、l-メントールなど",
-    contraindications: "禁忌・注意事項\n傷口、目の周囲、粘膜には使用しないでください。肌に異常が現れた場合は使用を中止してください。"
+    contraindications: "禁忌・注意事項\n傷口、目の周囲、粘膜には使用しないでください。肌に異常が現れた場合は使用を中止してください。",
+    buyUrl: "https://buy.stripe.com/4gM9ATb5faFibZefN18EM0l"
   },
   {
     id: "d12",
@@ -320,7 +331,8 @@ export const SAMPLE_DRUGS: Drug[] = [
     effects: "滋養強壮、胃腸障害・栄養障害・病中病後・肉体疲労・発熱性消耗性疾患・妊娠授乳期などの場合の栄養補給、虚弱体質",
     usage: "成人（15才以上）：1回3錠、1日2回服用してください。",
     ingredients: "肝臓水解物、イノシトールなど",
-    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。服用後に異常が現れた場合は、使用を中止してください。"
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。服用後に異常が現れた場合は、使用を中止してください。",
+    buyUrl: "https://buy.stripe.com/9B65kDddnbJm3sI58n8EM0k"
   },
   {
     id: "d13",
@@ -334,7 +346,8 @@ export const SAMPLE_DRUGS: Drug[] = [
     effects: "眼精疲労、筋肉痛・関節痛（肩こり、腰痛、五十肩など）、神経痛、手足のしびれ",
     usage: "15歳以上：1回2〜3錠、1日1回食後すぐに水またはお湯で服用してください。",
     ingredients: "フルスルチアミン、ピリドキシン塩酸塩など",
-    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。服用後に異常が現れた場合は、使用を中止してください。"
+    contraindications: "禁忌・注意事項\n本剤の成分に対してアレルギー症状を起こしたことがある方は使用しないでください。服用後に異常が現れた場合は、使用を中止してください。",
+    buyUrl: "https://buy.stripe.com/14A3cv3CN3cQ6EU1Wb8EM0j"
   },
   {
     id: "d14",
@@ -348,7 +361,8 @@ export const SAMPLE_DRUGS: Drug[] = [
     effects: "肩のこり、腰の痛み、打撲、捻挫、関節痛、筋肉痛、筋肉疲労、しもやけ、骨折痛",
     usage: "ロイヒつぼ膏の膏面をフィルムからはがし、患部にお貼りください。",
     ingredients: "サリチル酸メチル、l-メントールなど",
-    contraindications: "禁忌・注意事項\n傷口、湿疹、かぶれ、粘膜には使用しないでください。肌に異常が現れた場合は、使用を中止してください。"
+    contraindications: "禁忌・注意事項\n傷口、湿疹、かぶれ、粘膜には使用しないでください。肌に異常が現れた場合は、使用を中止してください。",
+    buyUrl: "https://buy.stripe.com/eVq8wP5KV9BeaVa8kz8EM0i"
   }
 ];
 

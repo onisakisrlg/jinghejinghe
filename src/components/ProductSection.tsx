@@ -159,7 +159,7 @@ export default function ProductSection({ setActiveSection }: ProductSectionProps
                     </div>
                   </div>
                   <a 
-                    href="https://buy.stripe.com/fZubJ2bVn2bM9Yt5DPfrW18"
+                    href={drug.buyUrl || "#"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 px-6 rounded-xl flex items-center gap-2 transition shadow-sm cursor-pointer text-sm"

@@ -14,6 +14,7 @@ export interface Drug {
   warnings?: string; // 使用上の注意（勧告）
   contraindications?: string; // してはいけないこと（禁忌）
   imageUrl?: string; // 商品画像
+  buyUrl?: string; // 購入用Stripeリンク
 }
 
 export interface NewsItem {
